@@ -1,15 +1,22 @@
 import { Button } from "antd";
 import "./Header.scss";
 import { SunFilled, MoonFilled } from "@ant-design/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
+
+  useEffect(() => {
+    document.body.classList.add("dark");
+  }, [])
 
   const toggleTheme = () => {
-    setDark(!dark);
-  }
-  
+    setDark((prev) => {
+      document.body.classList.toggle("dark", !prev);
+      return !prev;
+    });
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -17,8 +24,8 @@ export const Header = () => {
           <a href="index.html" className="header__icon-link">
           <svg
             className="header__icon"
-            width="64"
-            height="64"
+            width="44"
+            height="44"
             aria-hidden="true"
           >
             <use href="/public/svg/sprite.svg#icon-user"></use>
@@ -46,9 +53,9 @@ export const Header = () => {
               </a>
             </li>
           </ul>
-          <div className="header__theme">
-            <Button className={`header__theme-button ${dark ? "active" : ""}`} onClick={toggleTheme}>
-              {dark ? <MoonFilled /> : <SunFilled />}
+          <div className={`header__theme ${!dark ? "header__theme-light" : ""}`} onClick={toggleTheme}>
+            <Button className={`header__theme-button ${dark ? "active" : ""}`}>
+              {dark ? <MoonFilled style={{color: "#000"}} /> : <SunFilled style={{color: "#000"}} />}
             </Button>
           </div>
         </div>
