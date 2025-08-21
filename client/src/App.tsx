@@ -1,5 +1,6 @@
 import './App.css'
 import './Reset.css'
+import 'normalize.css'
 
 function App() {
 
