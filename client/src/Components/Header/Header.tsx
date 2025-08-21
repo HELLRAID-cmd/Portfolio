@@ -1,6 +1,8 @@
+import "./Header.scss"
+
 export const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h1>My Portfolio</h1>
     </header>
   )
