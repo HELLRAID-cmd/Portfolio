@@ -1,9 +1,10 @@
+import { Header } from './Components/Header/Header'
 import './Reset.css'
 
 function App() {
 
   return (
-    <h1>Hello</h1>
+    <Header />
   )
 }
 
