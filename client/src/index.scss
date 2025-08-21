@@ -1,0 +1,9 @@
+@use "./styles/variables" as *;
+
+body {
+  background-color: $color-light-gray;
+
+  &.dark {
+    background-color: $color-jaguar;
+  }
+}

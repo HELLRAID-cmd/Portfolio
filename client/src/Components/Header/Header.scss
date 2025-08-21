@@ -1,11 +1,18 @@
 @use "../../styles/variables" as *;
 
 .header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__icon {
+    color: $color-white;
   }
 
   &__menu {
@@ -17,9 +24,18 @@
     display: flex;
     border: 1px solid $color-black;
     border-radius: 20px;
-    // padding: 2px 4px;
-    max-width: 85px;
+    max-width: 70px;
     width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      border-color: red;
+    }
+
+    &-light {
+      border-color: $color-purple;
+      background-color: $color-light-gray-2;
+    }
 
     &-button {
       padding: 0;
@@ -31,9 +47,17 @@
       transition: transform 0.7s ease-in-out;
       transform: translateX(0) rotate(0);
 
-      &.active {
-        transform: translateX(calc(85px - 37px)) rotate(360deg);
+      &:hover {
+        background-color: unset;
       }
+
+      &.active {
+        transform: translateX(calc(70px - 37px)) rotate(360deg);
+      }
+    }
+
+    &__icon:hover {
+      background-color: unset;
     }
   }
 }
