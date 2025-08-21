@@ -1,3 +1,40 @@
+@use "../../styles/variables" as *;
+
 .header {
-  background-color: red;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__theme {
+    display: flex;
+    border: 1px solid $color-black;
+    border-radius: 20px;
+    // padding: 2px 4px;
+    max-width: 85px;
+    width: 100%;
+
+    &-button {
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      box-shadow: unset;
+      width: 35px;
+      height: 35px;
+      transition: transform 0.7s ease-in-out;
+      transform: translateX(0) rotate(0);
+
+      &.active {
+        transform: translateX(calc(85px - 37px)) rotate(360deg);
+      }
+    }
+  }
 }
+
