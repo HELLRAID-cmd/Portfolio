@@ -1,10 +1,15 @@
 import { Header } from './Components/Header/Header'
 import './Reset.css'
+import "./styles/container.scss"
+import { Layout } from 'antd';
 
 function App() {
-
   return (
-    <Header />
+    <Layout>
+      <Header />
+      <Layout>
+      </Layout>
+    </Layout>
   )
 }
 
