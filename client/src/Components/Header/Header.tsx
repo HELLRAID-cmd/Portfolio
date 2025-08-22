@@ -5,16 +5,25 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
   const [dark, setDark] = useState(true);
+  const [icon, setIcon] = useState(<MoonFilled style={{color: "#000"}} />);
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
-    document.body.classList.add("dark");
+    document.body.classList.add(theme);
   }, [])
 
   const toggleTheme = () => {
     setDark((prev) => {
-      document.body.classList.toggle("dark", !prev);
+      setTimeout(() => {
+        document.body.classList.toggle("dark", !prev);
+      }, 200);
       return !prev;
     });
+
+    setTimeout(() => {
+      setIcon(dark ? <SunFilled style={{color: "#000"}} /> : <MoonFilled style={{color: "#000"}} />);
+      setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    }, 200);
   };
 
   return (
@@ -53,9 +62,9 @@ export const Header = () => {
               </a>
             </li>
           </ul>
-          <div className={`header__theme ${!dark ? "header__theme-light" : ""}`} onClick={toggleTheme}>
+          <div className={`header__theme ${theme === "light" ? "header__theme-light" : "header__theme-dark"}`} onClick={toggleTheme}>
             <Button className={`header__theme-button ${dark ? "active" : ""}`}>
-              {dark ? <MoonFilled style={{color: "#000"}} /> : <SunFilled style={{color: "#000"}} />}
+              {icon}
             </Button>
           </div>
         </div>

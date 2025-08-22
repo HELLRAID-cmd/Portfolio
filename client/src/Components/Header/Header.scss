@@ -33,8 +33,13 @@
     }
 
     &-light {
-      border-color: $color-purple;
+      border-color: $color-purple-light;
       background-color: $color-light-gray-2;
+    }
+
+    &-dark {
+      border-color: $color-purple-light;
+      background-color: $color-jaguar;
     }
 
     &-button {

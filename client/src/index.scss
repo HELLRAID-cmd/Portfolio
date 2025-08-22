@@ -1,6 +1,7 @@
 @use "./styles/variables" as *;
 
 body {
+  transition: background-color $transition-200;
   background-color: $color-light-gray;
 
   &.dark {
