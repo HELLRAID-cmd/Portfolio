@@ -1,0 +1,19 @@
+html {
+  transition: background-color var(--transition-200) 0.2s, color var(--transition-200) 0.2s;
+  &.light {
+    background-color: var(--c-light-gray);
+    .header__menu-item-link {
+      color: var(--c-jaguar);
+    }
+  }
+  &.dark {
+    background-color: var(--c-jaguar);
+  }
+}
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+main {
+  padding: 98px 0 0 0;
+}
