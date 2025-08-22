@@ -13,6 +13,10 @@
 
   &__icon {
     color: var(--c-white);
+
+    &:hover {
+      color: var(--c-purple);
+    }
   }
 
   &__menu {
