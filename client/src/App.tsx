@@ -1,7 +1,7 @@
 import { Header } from './Components/Header/Header'
-import './Reset.scss'
+import './styles/Reset.scss'
 import "./styles/container.scss"
-import "./index.scss"
+import "./styles/index.scss"
 import { Layout } from 'antd';
 import { Hero } from './Components/Hero/Hero';
 
