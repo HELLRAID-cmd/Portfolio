@@ -4,26 +4,28 @@ import { SunFilled, MoonFilled } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
-  const [dark, setDark] = useState(true);
-  const [icon, setIcon] = useState(<MoonFilled style={{color: "#000"}} />);
+  // const [dark, setDark] = useState(true);
+  // const [icon, setIcon] = useState(<MoonFilled />);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [iconTheme, setIconTheme] = useState("light");
 
   useEffect(() => {
-    document.body.classList.add(theme);
-  }, [])
+    document.documentElement.classList.add(theme);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.remove(
+      theme === "dark" ? "light" : "dark"
+    );
+    document.documentElement.classList.add(theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    setDark((prev) => {
-      setTimeout(() => {
-        document.body.classList.toggle("dark", !prev);
-      }, 200);
-      return !prev;
-    });
-
     setTimeout(() => {
-      setIcon(dark ? <SunFilled style={{color: "#000"}} /> : <MoonFilled style={{color: "#000"}} />);
-      setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+      setIconTheme((prev) => (prev === "dark" ? "light" : "dark"));
     }, 200);
+
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -31,14 +33,14 @@ export const Header = () => {
       <div className="container">
         <div className="header__wrapper">
           <a href="index.html" className="header__icon-link">
-          <svg
-            className="header__icon"
-            width="44"
-            height="44"
-            aria-hidden="true"
-          >
-            <use href="/public/svg/sprite.svg#icon-user"></use>
-          </svg>
+            <svg
+              className="header__icon"
+              width="44"
+              height="44"
+              aria-hidden="true"
+            >
+              <use href="/public/svg/sprite.svg#icon-user"></use>
+            </svg>
           </a>
           <ul className="header__menu">
             <li className="header__menu-item">
@@ -67,9 +69,13 @@ export const Header = () => {
               </a>
             </li>
           </ul>
-          <div className={`header__theme ${theme === "light" ? "header__theme-light" : "header__theme-dark"}`} onClick={toggleTheme}>
-            <Button className={`header__theme-button ${dark ? "active" : ""}`}>
-              {icon}
+          <div className="header__theme" onClick={toggleTheme}>
+            <Button
+              className={`header__theme-button ${
+                theme === "dark" ? "active" : ""
+              }`}
+            >
+              {iconTheme === "dark" ? <SunFilled /> : <MoonFilled />}
             </Button>
           </div>
         </div>
