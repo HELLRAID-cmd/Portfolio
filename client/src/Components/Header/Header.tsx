@@ -4,8 +4,6 @@ import { SunFilled, MoonFilled } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
-  // const [dark, setDark] = useState(true);
-  // const [icon, setIcon] = useState(<MoonFilled />);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [iconTheme, setIconTheme] = useState("light");
 
