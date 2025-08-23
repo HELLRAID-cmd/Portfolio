@@ -1,11 +1,10 @@
 :root {
   // Colors
   --c-white: #ffffff;
+  --c-white-20: rgba(255, 255, 255, 0.2);
   --c-black: #000000;
-  --c-jaguar: #1D1C29;
   --c-jaguar-dark: #2c2a41;
   --c-light-gray: #e6e6e6;
-  --c-light-gray-2: #dddddd;
   --c-purple: #9143a5;
 
   // Typography
@@ -29,9 +28,18 @@
 
   --width-100: 100%;
 
-  --font-size-16: 16px;
-  --font-size-18: 18px;
-  --font-size-20: 20px;
-  --font-size-24: 24px;
-  
+  // Font size
+  --fsize-16: 16px;
+  --fsize-18: 18px;
+  --fsize-20: 20px;
+  --fsize-24: 24px;
+
+  // Font weight
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
 }
+
+// Dealy
+$delay-02: 0.2s
