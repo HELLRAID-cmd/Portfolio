@@ -1,13 +1,30 @@
+@use "../styles/variables" as *;
+
 html {
-  transition: background-color var(--transition-200) 0.2s, color var(--transition-200) 0.2s;
+  transition: background-color var(--transition-200) $delay-02, color var(--transition-200) $delay-02;
+  background-color: var(--c-light-gray);
+
   &.light {
-    background-color: var(--c-light-gray);
-    .header__menu-item-link {
-      color: var(--c-jaguar);
+
+    .header {
+      background-color: var(--c-light-gray);
+
+      &__menu-item-link {
+        color: var(--c-jaguar-dark);
+      }
+
+      &__theme {
+        background-color: var(--c-jaguar-dark);
+      }
+
+      &__icon {
+        color: var(--c-jaguar-dark);
+      }
     }
+
   }
   &.dark {
-    background-color: var(--c-jaguar);
+    background-color: var(--c-jaguar-dark);
   }
 }
 body {
