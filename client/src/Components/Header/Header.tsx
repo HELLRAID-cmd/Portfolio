@@ -2,6 +2,7 @@ import { Button } from "antd";
 import "./Header.scss";
 import { SunFilled, MoonFilled } from "@ant-design/icons";
 import { useEffect, useState } from "react";
+import { HeaderStar } from "./HeaderStar";
 
 export const Header = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -17,7 +18,7 @@ export const Header = () => {
     );
     document.documentElement.classList.add(theme);
   }, [theme]);
-
+ 
   const toggleTheme = () => {
     setTimeout(() => {
       setIconTheme((prev) => (prev === "dark" ? "light" : "dark"));
@@ -73,8 +74,9 @@ export const Header = () => {
                 theme === "dark" ? "active" : ""
               }`}
             >
-              {iconTheme === "dark" ? <SunFilled /> : <MoonFilled />}
+              {iconTheme === "dark" ? <SunFilled className="header__theme-icon" /> : <MoonFilled className="header__theme-icon"/>}
             </Button>
+            <HeaderStar className={`header__theme-icon-star ${iconTheme}`}/>
           </div>
         </div>
       </div>
