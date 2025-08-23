@@ -9,16 +9,46 @@ html {
     .header {
       background-color: var(--c-light-gray);
 
+      &__icon {
+        color: var(--c-jaguar-dark);
+
+        &:hover {
+          color: var(--c-purple);
+        }
+
+        &:focus-visible {
+          color: var(--c-purple);
+        }
+      }
+
       &__menu-item-link {
         color: var(--c-jaguar-dark);
+
+        &:hover {
+          color: var(--c-purple);
+        }
+
+        &:focus-visible {
+          color: var(--c-purple);
+        }
       }
 
       &__theme {
         background-color: var(--c-jaguar-dark);
-      }
+        transition: box-shadow var(--transition-200) $delay-02;
 
-      &__icon {
-        color: var(--c-jaguar-dark);
+        &::before {
+          content: "";
+          box-shadow: unset;
+          box-shadow: -10px 0 10px -5px var(--c-sun-yellow);
+          transition: box-shadow var(--transition-200);
+        }
+
+        &-icon-star {
+          transform: translateX(-13px);
+          color: var(--c-white);
+          transition: transform var(--transition-200);
+        }
       }
     }
 

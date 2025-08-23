@@ -21,6 +21,10 @@
     &:hover {
       color: var(--c-purple);
     }
+
+    &:focus-visible {
+      color: var(--c-purple);
+    }
   }
 
   &__menu {
@@ -45,10 +49,10 @@
           border: 1px solid transparent;
           width: 100%;
           height: 100%;
-          top: 0;
-          left: 0;
+          top: 55%;
+          left: 50%;
           border-radius: var(--border-radius-16);
-          transform: scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
           transition: transform var(--transition-200), border var(--transition-200);
         }
 
@@ -58,8 +62,18 @@
 
         &:hover::before {
           border-color: var(--c-purple);
-          transform: scale(1);
+          transform: translate(-50%, -50%) scale(1);
         }
+        
+        &:focus-visible {
+          color: var(--c-purple);
+        }
+
+        &:focus-visible::before {
+          border-color: var(--c-purple);
+          transform: translate(-50%, -50%) scale(1);
+        }
+
       }
     }
   }
@@ -82,9 +96,9 @@
       height: 100%;
       top: 0;
       right: 0;
-      box-shadow: 10px 0 7px 0 var(--c-white-20);
+      box-shadow: 10px 0 10px 3px var(--c-white-20);
       border-radius: 20px;
-      
+      transition: box-shadow var(--transition-200) $delay-02;
     }
 
     &:hover {
@@ -106,8 +120,58 @@
       }
     }
 
-    &__icon:hover {
-      background-color: unset;
+    &-icon {
+      color: var(--c-jaguar-dark);
+    }
+
+    &-icon-star {
+      top: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      transform: translateX(0);
+      transition: transform var(--transition-200) $delay-02;
+      color: var(--c-white);
+      
+      &:nth-of-type(1) {
+        width: 4px;
+        aspect-ratio: 1;
+        top: 3px;
+        right: -8px;
+        transform: rotate(19deg);
+      }
+
+      &:nth-of-type(2) {
+        width: 4px;
+        aspect-ratio: 1;
+        top: 9px;
+        right: -6px;
+        transform: rotate(-19deg);
+      }
+
+      &:nth-of-type(3) {
+        right: -13px;
+        top: 12px;
+        transform: rotate(19deg);
+      }
+
+      &:nth-of-type(4) {
+        width: 4px;
+        aspect-ratio: 1;
+        right: -8px;
+        top: unset;
+        bottom: 10px;
+        transform: rotate(-19deg);
+      }
+
+      &:nth-of-type(5) {
+        width: 3px;
+        aspect-ratio: 1;
+        right: -5px;
+        top: unset;
+        bottom: 5px;
+        transform: rotate(19deg);
+      }
     }
   }
 }
