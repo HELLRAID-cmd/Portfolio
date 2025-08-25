@@ -1,7 +1,7 @@
-import { Header } from "./Components/Header/Header";
 import "./styles/Reset.scss";
 import "./styles/container.scss";
 import "./styles/index.scss";
+import { Header } from "./Components/Header/Header";
 import { Layout } from "antd";
 import { Hero } from "./Components/Hero/Hero";
 
