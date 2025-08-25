@@ -14,6 +14,11 @@
     align-items: center;
   }
 
+  &__icon-link {
+    width: 44px;
+    height: 44px;
+  }
+
   &__icon {
     color: var(--c-white);
     transition: color var(--transition-200) $delay-02;
@@ -36,7 +41,7 @@
       
       &-link {
         position: relative;
-        font-size: var(--fsize-16);
+        font-size: var(--f-size-16);
         font-weight: var(--fw-bold);
         padding: var(--padding-5-10);
         color: var(--c-white);
