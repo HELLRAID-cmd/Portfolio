@@ -53,6 +53,18 @@ html {
     }
 
     .hero {
+
+      &__wrapper {
+
+        &-button {
+          box-shadow: 0 0 10px -2px var(--c-jaguar-dark);
+
+          &-arrow {
+            color: var(--c-jaguar-dark);
+          }
+        }
+      }
+      
       .hero__text {
         &-wrapper {
           &-name,
@@ -62,7 +74,7 @@ html {
         }
 
         &-button {
-          box-shadow: -2px -3px 4px -2px var(--c-black);
+          box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
           color: var(--c-jaguar-dark);
 
           &.ant-btn-default.ant-btn-default:hover {
@@ -86,5 +98,5 @@ body {
   font-family: var(--ff-main);
 }
 main {
-  padding: 98px 0 0 0;
+  padding: 74px 0 0 0;
 }
