@@ -1,11 +1,11 @@
 @use "../styles/variables" as *;
 
 html {
-  transition: background-color var(--transition-200) $delay-02, color var(--transition-200) $delay-02;
+  transition: background-color var(--transition-200) $delay-02,
+    color var(--transition-200) $delay-02;
   background-color: var(--c-light-gray);
 
   &.light {
-
     .header {
       background-color: var(--c-light-gray);
 
@@ -52,6 +52,25 @@ html {
       }
     }
 
+    .hero {
+      .hero__text {
+        &-wrapper {
+          &-name,
+          &-desc {
+            color: var(--c-jaguar-dark);
+          }
+        }
+
+        &-button {
+          box-shadow: -2px -3px 4px -2px var(--c-black);
+          color: var(--c-jaguar-dark);
+
+          &.ant-btn-default.ant-btn-default:hover {
+            box-shadow: 2px 3px 4px -2px var(--c-white);
+          }
+        }
+      }
+    }
   }
   &.dark {
     background-color: var(--c-jaguar-dark);
