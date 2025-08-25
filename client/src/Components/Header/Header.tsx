@@ -1,31 +1,11 @@
 import { Button } from "antd";
 import "./Header.scss";
 import { SunFilled, MoonFilled } from "@ant-design/icons";
-import { useEffect, useState } from "react";
 import { HeaderStar } from "./HeaderStar";
+import { useTheme } from "../Theme/useTheme";
 
 export const Header = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-  const [iconTheme, setIconTheme] = useState("light");
-
-  useEffect(() => {
-    document.documentElement.classList.add(theme);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.remove(
-      theme === "dark" ? "light" : "dark"
-    );
-    document.documentElement.classList.add(theme);
-  }, [theme]);
- 
-  const toggleTheme = () => {
-    setTimeout(() => {
-      setIconTheme((prev) => (prev === "dark" ? "light" : "dark"));
-    }, 200);
-
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+  const {theme, iconTheme, toggleTheme} = useTheme()
 
   return (
     <header className="header">
