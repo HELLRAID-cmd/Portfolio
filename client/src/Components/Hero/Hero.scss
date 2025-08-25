@@ -38,8 +38,9 @@
         border-radius: var(--border-radius-20);
         color: var(--c-white);
         box-shadow: 2px 3px 4px -2px var(--c-white);
-        transition: box-shadow var(--transition-200), border-color var(--transition-200), color var(--transition-200);
-        
+        transition: box-shadow var(--transition-200),
+        border-color var(--transition-200), color var(--transition-200);
+
         &.ant-btn-default.ant-btn-default:hover {
           background: unset;
           color: var(--c-purple);
@@ -49,7 +50,6 @@
       }
     }
 
-    
     &-button {
       position: absolute;
       bottom: 0;
@@ -93,7 +93,7 @@
       }
 
       &.ant-btn-default.ant-btn-default svg {
-          transition: color var(--transition-200);
+        transition: color var(--transition-200);
       }
 
       &.ant-btn-default.ant-btn-default:hover {

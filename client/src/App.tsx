@@ -4,6 +4,7 @@ import "./styles/index.scss";
 import { Header } from "./Components/Header/Header";
 import { Layout } from "antd";
 import { Hero } from "./Components/Hero/Hero";
+import { About } from "./Components/About/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </Layout>
   );
