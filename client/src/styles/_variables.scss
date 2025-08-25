@@ -30,10 +30,14 @@
   --width-100: 100%;
 
   // Font size
-  --fsize-16: 16px;
-  --fsize-18: 18px;
-  --fsize-20: 20px;
-  --fsize-24: 24px;
+  --f-size-16: 16px;
+  --f-size-18: 18px;
+  --f-size-20: 20px;
+  --f-size-24: 24px;
+  --f-size-44: 44px;
+
+  // Line height
+  --lh-44: 54px;
 
   // Font weight
   --fw-regular: 400;
@@ -43,4 +47,4 @@
 }
 
 // Dealy
-$delay-02: 0.2s
+$delay-02: 0.2s;

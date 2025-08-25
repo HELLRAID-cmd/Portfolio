@@ -1,5 +1,84 @@
 @use "../../styles/variables" as *;
 
 .hero {
-  height: 1000px;
+  &__wrapper {
+    position: relative;
+    padding: 110px 0 38px;
+
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+      height: 600px;
+
+      &-name,
+      &-desc {
+        font-size: var(--f-size-44);
+        font-weight: var(--fw-regular);
+        line-height: var(--lh-44);
+        color: var(--c-white);
+        margin: 0;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: unset;
+      border: unset;
+      border-radius: var(--border-radius-16);
+      box-shadow: 0 0 10px -2px var(--c-white-20);
+
+      &::before {
+        content: "";
+        position: absolute;
+        border: 1px solid transparent;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        border-radius: var(--border-radius-16);
+        transform: translate(-50%, -50%) scale(1.2);
+        transition: transform var(--transition-200),
+          border var(--transition-200);
+      }
+
+      &:hover {
+        color: var(--c-purple);
+      }
+
+      &:hover::before {
+        border-color: var(--c-purple);
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      &:focus-visible {
+        color: var(--c-purple);
+      }
+
+      &:focus-visible::before {
+        border-color: var(--c-purple);
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      &.ant-btn-default.ant-btn-default svg {
+          transition: color var(--transition-200);
+      }
+
+      &.ant-btn-default.ant-btn-default:hover {
+        background: unset;
+
+        svg {
+          color: var(--c-purple);
+        }
+      }
+
+      &-arrow {
+        color: var(--c-white);
+      }
+    }
+  }
 }
