@@ -11,12 +11,12 @@ export const Hero = () => {
             <div className="hero__wrapper">
               <Typography.Paragraph className="hero__text">
                 <Typography.Paragraph className="hero__text-wrapper">
-                  <Typography.Paragraph className="hero__text-wrapper-name">
+                  <Typography.Title level={1} className="hero__text-wrapper-title">
                     Hello! My name is <br /> Emil Gaynulin
-                  </Typography.Paragraph>
-                  <Typography.Text className="hero__text-wrapper-desc">
+                  </Typography.Title>
+                  <Typography.Title level={2} style={{margin: 0}} className="hero__text-wrapper-desc">
                     This is what I can do.
-                  </Typography.Text>
+                  </Typography.Title>
                 </Typography.Paragraph>
                 <Button className="hero__text-button">Check!</Button>
               </Typography.Paragraph>
