@@ -1,5 +1,9 @@
 @use "../../styles/variables" as *;
 
+.hero-sect {
+  margin: 0 0 110px 0;
+}
+
 .hero {
   &__wrapper {
     position: relative;
@@ -21,7 +25,6 @@
 
         &-title,
         &-desc {
-          font-size: var(--f-size-44);
           font-weight: var(--fw-regular);
           line-height: var(--lh-44);
           color: var(--c-white);
@@ -29,8 +32,12 @@
           transition: color var(--transition-200);
         }
 
+        &-title {
+          font-size: var(--f-size-h1);
+        }
+
         &-desc {
-          font-size: var(--f-size-40);
+          font-size: var(--f-size-h2);
         }
       }
 
@@ -47,7 +54,7 @@
         &.ant-btn-default.ant-btn-default:hover {
           background: unset;
           color: var(--c-purple);
-          box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
+          box-shadow: -2px -3px 4px -2px var(--c-black);
           border-color: var(--c-purple);
         }
       }
