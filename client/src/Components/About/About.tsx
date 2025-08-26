@@ -1,4 +1,24 @@
-import { Typography } from "antd";
+import { Typography, Card, Timeline } from "antd";
+import "./About.scss";
+import { skills } from "../info";
+
+export const Cards = () => {
+  return (
+    <>
+      {skills.map((group, i) => (
+        <Card key={i}>
+          <Timeline
+          items={group.map((item) => ({
+            key: item.id,
+            children: <p className="about__card-timeline-desc">{item.desc}</p>,
+          }))}
+          >
+          </Timeline>
+        </Card>
+      ))}
+    </>
+  );
+};
 
 export const About = () => {
   return (
@@ -7,8 +27,12 @@ export const About = () => {
         <div className="about">
           <div className="container">
             <div className="about__wrapper">
-              asd
-              <Typography.Title level={3}>Professional skills</Typography.Title>
+              <Typography.Title level={3} className="about__title">
+                Professional skills
+              </Typography.Title>
+              <div className="about__card">
+                <Cards />
+              </div>
             </div>
           </div>
         </div>
