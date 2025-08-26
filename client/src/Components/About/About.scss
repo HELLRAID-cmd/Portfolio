@@ -1,0 +1,54 @@
+@use "../../styles/variables" as *;
+
+.about-sect {
+  margin: 0 0 110px 0;
+}
+
+.about {
+  &__title.ant-typography {
+    font-size: var(--f-size-h3);
+    color: var(--c-purple);
+    margin: 0 0 50px 0;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    &-timeline-desc {
+      color: var(--c-white);
+      font-size: var(--f-size-16);
+    }
+
+    .ant {
+      &-card {
+        border: none;
+        background-color: var(--c-jaguar-dark);
+        padding: 34px 18px;
+        box-shadow: 0 0 10px -3px var(--c-black);
+        border-radius: var(--border-radius-20);
+        max-height: 466px;
+
+        &-body {
+          padding: var(--padding-0);
+        }
+      }
+
+      &-timeline {
+        &-item {
+          padding: var(--padding-0);
+          padding: 0 0 22px 0;
+          &-tail,
+          &-head {
+            background-color: var(--c-purple);
+          }
+
+          &-head {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
