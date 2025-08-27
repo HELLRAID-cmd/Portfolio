@@ -15,7 +15,13 @@ export const skills = [
     { id: 4, desc: "TypeScript" },
   ],
   [
-    { id: 5, desc: "React" },
-    { id: 6, desc: "SCSS" },
+    { id: 5, desc: "I am studying to be a programmer at university." },
+    { id: 6, desc: "I approach my work responsibly." },
+    { id: 7, desc: "I am responsible about deadlines for work." },
+    { id: 8, desc: "Motivate me to improve my skills, constantly learning new technologies" },
+    { id: 9, desc: "I approach my work responsibly." },
+    { id: 10, desc: "I approach my work responsibly." },
+    { id: 11, desc: "I approach my work responsibly." },
+    { id: 12, desc: "I approach my work responsibly." },
   ],
 ];
