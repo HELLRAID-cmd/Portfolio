@@ -2,25 +2,26 @@ import { Typography, Card, Timeline } from "antd";
 import "./About.scss";
 import { skills } from "../info";
 
-export const Cards = () => {
-  return (
-    <>
-      {skills.map((group, i) => (
-        <Card key={i}>
-          <Timeline
-          items={group.map((item) => ({
-            key: item.id,
-            children: <p className="about__card-timeline-desc">{item.desc}</p>,
-          }))}
-          >
-          </Timeline>
-        </Card>
-      ))}
-    </>
-  );
-};
-
 export const About = () => {
+  const Cards = () => {
+    return (
+      <>
+        {skills.map((group, i) => (
+          <Card key={i}>
+            <Timeline
+              items={group.map((item) => ({
+                key: item.id,
+                children: (
+                  <p className="about__card-timeline-desc">{item.desc}</p>
+                ),
+              }))}
+            ></Timeline>
+          </Card>
+        ))}
+      </>
+    );
+  };
+
   return (
     <>
       <section className="about-sect">
