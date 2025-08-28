@@ -1,8 +1,15 @@
 import { ArrowDownOutlined } from "@ant-design/icons";
 import { Typography, Button } from "antd";
+import { Routes, Route, Link } from "react-router-dom";
+import { HeroSudoku } from "./HeroGame/HeroSudoku";
+import { HeroXO } from "./HeroGame/HeroXO";
+import { HeroSnake } from "./HeroGame/HeroSnake";
 import "./Hero.scss";
+import { useState } from "react";
 
 export const Hero = () => {
+  const [active, setActive] = useState("");
+  
   return (
     <>
       <section className="hero-sect">
@@ -29,11 +36,17 @@ export const Hero = () => {
               </Typography.Paragraph>
 
               <Typography.Paragraph className="hero__game">
-                <div className="hero__game-buttons">
-                  <Button className="hero__game-button sudoku">Sudoku</Button>
-                  <Button className="hero__game-button x-o">X-O</Button>
-                  <Button className="hero__game-button snake">Snake</Button>
+                <div className="hero__game-links">
+                  <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
+                  <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
+                  <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
                 </div>
+
+                <Routes>
+                  <Route path="/" element={<HeroSudoku />} />
+                  <Route path="/HeroXO" element={<HeroXO />} />
+                  <Route path="/HeroSnake" element={<HeroSnake />} />
+                </Routes>
               </Typography.Paragraph>
 
               <Button className="hero__wrapper-button" aria-label="Scroll down">
