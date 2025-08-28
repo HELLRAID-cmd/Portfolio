@@ -66,11 +66,11 @@ html {
       }
 
       .hero__game {
-        &-button {
+        &-link {
           box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
           color: var(--c-jaguar-dark);
 
-          &.ant-btn-default.ant-btn-default:hover {
+          &:hover {
             box-shadow: 2px 3px 4px -2px var(--c-white);
           }
         }

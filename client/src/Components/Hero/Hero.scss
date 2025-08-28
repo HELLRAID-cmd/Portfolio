@@ -68,36 +68,32 @@
     .hero__game {
       width: 400px;
       height: 400px;
+      margin: 0;
 
       // Buttons
-      &-buttons {
+      &-links {
         display: flex;
         gap: 20px;
         justify-content: space-evenly;
 
       }
 
-      &-button {
+      &-link {
         position: relative;
-        border-color: transparent;
+        padding: var(--padding-5-10);
+        border: 1px solid transparent;
         color: var(--c-white);
         background-color: transparent;
         border-radius: var(--border-radius-16);
         box-shadow: 2px 3px 4px -2px var(--c-white);
         transition: box-shadow var(--transition-200), border-color var(--transition-200), color var(--transition-200);
 
-        &.ant-btn-default.ant-btn-default:hover {
+        &:hover,
+        &:focus,
+        &:focus-visible {
           color: var(--c-purple);
           box-shadow: -2px -3px 4px -2px var(--c-black);
           border-color: var(--c-purple);
-        }
-
-        &.ant-btn {
-
-          &:hover {
-            background-color: transparent;
-            color: var(--c-white);
-          }
         }
       }
     }
