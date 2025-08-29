@@ -1,9 +1,66 @@
 @use "../../../../styles/variables" as *;
 
-.sudoku {
+.sudoku-game {
   width: 100%;
   height: 400px;
-  box-shadow: 0 0 10px -5px var(--c-purple);
-  border-radius: var(--border-radius-20);
+  // border-radius: var(--border-radius-20);
   overflow: hidden;
+  display: grid;
+  align-items: center;
+  position: relative;
+
+  &__board {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px -5px var(--c-purple);
+    border-radius: var(--border-radius-20);
+    overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0;
+
+    &:nth-child(3n):not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: var(--f-size-16);
+    font-weight: var(--fw-bold);
+    border: 1px solid var(--c-black);
+    outline: none;
+    transition: border var(--transition-200);
+    margin: 0;
+
+    &:hover,
+    &.prewritten:hover {
+      background-color: var(--c-purple);
+    }
+
+    &.prewritten {
+      font-weight: var(--fw-bold);
+      background-color: var(--c-write-20);
+      color: var(--c-white);
+    }
+
+    &.incorrect {
+      background-color: red;
+    }
+
+    &:nth-child(3n):not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+
+    &:focus {
+      border: 1px solid var(--c-black);
+      background-color: var(--c-purple);
+    }
+  }
 }
