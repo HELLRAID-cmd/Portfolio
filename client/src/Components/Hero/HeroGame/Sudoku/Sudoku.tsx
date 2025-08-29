@@ -3,8 +3,8 @@ import "./Sudoku.scss";
 
 export const Sudoku = () => {
   const [board, setBoard] = useState<number[][]>([]);
-  const [boardCheck, setBoardCheck] = useState([]);
-  const [isCellCorrect, setIsCellCorrect] = useState([]);
+  const [boardCheck, setBoardCheck] = useState<number[][]>([]);
+  const [isCellCorrect, setIsCellCorrect] = useState<boolean[][]>([]);
 
   const fetchBoard = async () => {
     const response = await fetch("https://sudoku-api.vercel.app/api/dosuku");
@@ -16,7 +16,7 @@ export const Sudoku = () => {
     fetchBoard();
   }, []);
 
-  const handleChange = (rowIndex, colIndex, value: string) => {
+  const handleChange = (rowIndex: number, colIndex: number, value: string) => {
     if (/^[1-9]?$/.test(value)) {
       const newBoard = board.map((row, rIdx) =>
         row.map((cell, cIdx) =>
@@ -27,7 +27,12 @@ export const Sudoku = () => {
             : cell
         )
       );
-      const isCorrect = parseInt(value) === boardCheck
+      const isCorrect = parseInt(value) === boardCheck[rowIndex][colIndex];
+      const newIsCorrect = isCellCorrect.map((row, rIdx) => 
+        row.map((cell, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? isCorrect : cell))
+      );
+      setBoard(newBoard);
+      setIsCellCorrect(newIsCorrect);
     }
   };
 
