@@ -34,14 +34,14 @@ export const Hero = () => {
                     This is what I can do.
                   </Typography.Title>
                 </Typography.Paragraph>
-                <Button className="hero__text-button">Check!</Button>
+                <Button className="hero__text-button button">Check!</Button>
               </Typography.Paragraph>
 
               <Typography.Paragraph className="hero__game">
                 <div className="hero__game-links">
-                  <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
-                  <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
-                  <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
+                  <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
+                  <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
+                  <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
                 </div>
 
                 <Routes>
