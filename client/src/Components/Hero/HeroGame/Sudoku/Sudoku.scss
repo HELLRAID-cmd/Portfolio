@@ -20,20 +20,27 @@
     display: flex;
     margin: 0;
 
-    // &:nth-child(9) {
-    //   margin: 0 0 10px 0;
-    // }
-
     &:last-of-type {
       margin: 0 0 10px 0;
     }
 
-    &:nth-child(4):not(:last-child)::before,
-    &:nth-child(7):not(:last-child)::before,
     &:nth-child(1):not(:last-child)::before,
     &:nth-child(9):not(:last-child)::before {
-      background-color: var(--c-purple);
-      z-index: 100;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 44%;
+    }
+
+    &:nth-child(9):not(:last-child)::before {
+      right: 0;
+      transform: translate(16.7%) rotate(90deg);
+    }
+
+    &:nth-child(1):not(:last-child)::before {
+      left: 0;
+      transform: translate(-16.5%) rotate(90deg);
     }
 
     &:nth-child(4):not(:last-child)::before,
@@ -43,25 +50,13 @@
       width: 100%;
       height: 1px;
     }
-
-    &:nth-child(1):not(:last-child)::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      top: 45%;
-      left: 0;
-      transform: translate(-16.5%) rotate(90deg);
-    }
-
+    
+    &:nth-child(4):not(:last-child)::before,
+    &:nth-child(7):not(:last-child)::before,
+    &:nth-child(1):not(:last-child)::before,
     &:nth-child(9):not(:last-child)::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      top: 45%;
-      right: 0;
-      transform: translate(16.7%) rotate(90deg);
+      background-color: var(--c-purple);
+      z-index: 100;
     }
   }
 
@@ -73,7 +68,7 @@
     font-weight: var(--fw-bold);
     border: 1px solid var(--c-white-20);
     outline: none;
-    transition: border var(--transition-200);
+    transition: border var(--transition-200) $delay-02, color var(--transition-200) $delay-02;
     margin: 0;
     cursor: pointer;
 
@@ -89,7 +84,7 @@
     }
 
     &.incorrect {
-      background-color: red;
+      background-color: var(--c-red);
     }
 
     &:focus {
