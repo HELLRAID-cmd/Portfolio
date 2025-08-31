@@ -1,4 +1,6 @@
 @use "../../styles/variables" as *;
+@use "../../styles/button" as *;
+@use "../../styles/link" as *;
 
 .hero-sect {
   margin: 0 0 110px 0;
@@ -68,25 +70,6 @@
           inset: 0;
         }
       }
-
-      &-button {
-        font-size: var(--f-size-14);
-        font-weight: var(--fw-medium);
-        border-color: transparent;
-        background-color: unset;
-        border-radius: var(--border-radius-20);
-        color: var(--c-white);
-        box-shadow: 2px 3px 4px -2px var(--c-white);
-        transition: box-shadow var(--transition-200),
-          border-color var(--transition-200), color var(--transition-200);
-
-        &.ant-btn-default.ant-btn-default:hover {
-          background: unset;
-          color: var(--c-purple);
-          box-shadow: -2px -3px 4px -2px var(--c-black);
-          border-color: var(--c-purple);
-        }
-      }
     }
 
     .hero__game {
@@ -94,31 +77,11 @@
       height: 100%;
       margin: 0;
 
-      // Buttons
+      // Links
       &-links {
         display: flex;
         gap: 20px;
         justify-content: space-evenly;
-      }
-
-      &-link {
-        position: relative;
-        padding: var(--padding-5-10);
-        border: 1px solid transparent;
-        color: var(--c-white);
-        background-color: transparent;
-        border-radius: var(--border-radius-16);
-        box-shadow: 2px 3px 4px -2px var(--c-white);
-        transition: box-shadow var(--transition-200),
-          border-color var(--transition-200), color var(--transition-200);
-
-        &:hover,
-        &:focus,
-        &:focus-visible {
-          color: var(--c-purple);
-          box-shadow: -2px -3px 4px -2px var(--c-black);
-          border-color: var(--c-purple);
-        }
       }
     }
 
