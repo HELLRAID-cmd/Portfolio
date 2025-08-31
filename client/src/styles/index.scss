@@ -96,6 +96,18 @@ html {
       }
     }
 
+    .sudoku {
+
+      &-game {
+
+        &__cell {
+          border-color: var(--c-gray);
+          color: var(--c-jaguar-dark);
+        }
+      }
+
+    }
+
     .about {
       &__card {
         &-timeline-desc {
