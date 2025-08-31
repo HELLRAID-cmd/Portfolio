@@ -81,8 +81,8 @@ export const Sudoku = () => {
               </div>
             ))
           )}
+        <Button onClick={fetchBoard} className="sudoku-game__button">New Board</Button>
         </div>
-        {/* <Button onClick={fetchBoard} className="sudoku-game__button">New Board</Button> */}
       </div>
     </>
   );

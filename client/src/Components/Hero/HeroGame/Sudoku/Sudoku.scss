@@ -2,8 +2,7 @@
 
 .sudoku-game {
   width: 100%;
-  height: 400px;
-  // border-radius: var(--border-radius-20);
+  height: 100%;
   overflow: hidden;
   display: grid;
   align-items: center;
@@ -14,8 +13,6 @@
     top: 50%;
     left: 52%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px -5px var(--c-purple);
-    border-radius: var(--border-radius-20);
     overflow: hidden;
   }
 
@@ -23,8 +20,48 @@
     display: flex;
     margin: 0;
 
-    &:nth-child(3n):not(:last-child) {
+    // &:nth-child(9) {
+    //   margin: 0 0 10px 0;
+    // }
+
+    &:last-of-type {
       margin: 0 0 10px 0;
+    }
+
+    &:nth-child(4):not(:last-child)::before,
+    &:nth-child(7):not(:last-child)::before,
+    &:nth-child(1):not(:last-child)::before,
+    &:nth-child(9):not(:last-child)::before {
+      background-color: var(--c-purple);
+      z-index: 100;
+    }
+
+    &:nth-child(4):not(:last-child)::before,
+    &:nth-child(7):not(:last-child)::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+    }
+
+    &:nth-child(1):not(:last-child)::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 45%;
+      left: 0;
+      transform: translate(-16.5%) rotate(90deg);
+    }
+
+    &:nth-child(9):not(:last-child)::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 45%;
+      right: 0;
+      transform: translate(16.7%) rotate(90deg);
     }
   }
 
@@ -34,10 +71,11 @@
     text-align: center;
     font-size: var(--f-size-16);
     font-weight: var(--fw-bold);
-    border: 1px solid var(--c-black);
+    border: 1px solid var(--c-white-20);
     outline: none;
     transition: border var(--transition-200);
     margin: 0;
+    cursor: pointer;
 
     &:hover,
     &.prewritten:hover {
@@ -54,13 +92,33 @@
       background-color: red;
     }
 
-    &:nth-child(3n):not(:last-child) {
-      margin: 0 10px 0 0;
-    }
-
     &:focus {
       border: 1px solid var(--c-black);
       background-color: var(--c-purple);
+    }
+  }
+
+  &__button {
+    display: flex;
+    margin: 0 auto 5px;
+    border: none;
+    background-color: transparent;
+    color: var(--c-white);
+    border-radius: var(--border-radius-16);
+    box-shadow: 2px 3px 4px -2px var(--c-white);
+    transition: box-shadow var(--transition-200), border-color var(--transition-200), color var(--transition-200);
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: var(--c-purple);
+      box-shadow: -2px -3px 4px -2px var(--c-black);
+      border-color: var(--c-purple);
+    }
+
+    &.ant-btn-default.ant-btn-default:hover {
+      background: var(--c-purple);
+      color: var(--c-white);
     }
   }
 }
