@@ -27,13 +27,17 @@
         gap: 8px;
         margin: 0;
 
+        &-title {
+          position: relative;
+          color: transparent;
+        }
+
         &-title,
         &-desc {
           font-weight: var(--fw-regular);
           line-height: var(--lh-44);
           color: var(--c-white);
           margin: 0;
-          transition: color var(--transition-200);
         }
 
         &-title {
@@ -42,6 +46,26 @@
 
         &-desc {
           font-size: var(--f-size-h2);
+          transition: color var(--transition-200) $delay-02;
+        }
+
+        &-title::before {
+          background: linear-gradient(var(--c-purple), var(--c-white));
+        }
+
+        &-title::after {
+          background: linear-gradient(var(--c-purple), var(--c-jaguar-dark));
+          opacity: 0;
+          transition: opacity var(--transition-200) $delay-02;
+        }
+
+        &-title::before,
+        &-title::after {
+          content: attr(data-text);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: absolute;
+          inset: 0;
         }
       }
 
@@ -54,7 +78,7 @@
         color: var(--c-white);
         box-shadow: 2px 3px 4px -2px var(--c-white);
         transition: box-shadow var(--transition-200),
-        border-color var(--transition-200), color var(--transition-200);
+          border-color var(--transition-200), color var(--transition-200);
 
         &.ant-btn-default.ant-btn-default:hover {
           background: unset;
@@ -67,7 +91,7 @@
 
     .hero__game {
       width: 400px;
-      height: 400px;
+      height: 100%;
       margin: 0;
 
       // Buttons
@@ -75,7 +99,6 @@
         display: flex;
         gap: 20px;
         justify-content: space-evenly;
-
       }
 
       &-link {
@@ -86,7 +109,8 @@
         background-color: transparent;
         border-radius: var(--border-radius-16);
         box-shadow: 2px 3px 4px -2px var(--c-white);
-        transition: box-shadow var(--transition-200), border-color var(--transition-200), color var(--transition-200);
+        transition: box-shadow var(--transition-200),
+          border-color var(--transition-200), color var(--transition-200);
 
         &:hover,
         &:focus,

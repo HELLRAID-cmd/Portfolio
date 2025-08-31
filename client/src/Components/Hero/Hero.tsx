@@ -21,6 +21,7 @@ export const Hero = () => {
                   <Typography.Title
                     level={1}
                     className="hero__text-wrapper-title"
+                    data-text="Hello! My name is Emil Gaynulin"
                   >
                     Hello! My name is <br /> Emil Gaynulin
                   </Typography.Title>
@@ -28,6 +29,7 @@ export const Hero = () => {
                     level={2}
                     style={{ margin: 0 }}
                     className="hero__text-wrapper-desc"
+                    data-text="This is what I can do."
                   >
                     This is what I can do.
                   </Typography.Title>

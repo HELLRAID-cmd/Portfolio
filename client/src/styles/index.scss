@@ -53,9 +53,7 @@ html {
     }
 
     .hero {
-
       &__wrapper {
-
         &-button {
           box-shadow: 0 0 10px -2px var(--c-jaguar-dark);
 
@@ -75,10 +73,13 @@ html {
           }
         }
       }
-      
+
       .hero__text {
         &-wrapper {
-          &-title,
+          &-title::after {
+            opacity: 1;
+          }
+
           &-desc {
             color: var(--c-jaguar-dark);
           }
@@ -93,13 +94,10 @@ html {
           }
         }
       }
-
     }
 
     .about {
-
       &__card {
-
         &-timeline-desc {
           color: var(--c-purple);
           transition: color var(--transition-200) $delay-02;
@@ -110,7 +108,9 @@ html {
         &-card {
           background-color: var(--c-white-50);
           box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
-          transition: transform var(--transition-200), box-shadow var(--transition-200), background-color var(--transition-200) $delay-02;
+          transition: transform var(--transition-200),
+            box-shadow var(--transition-200),
+            background-color var(--transition-200) $delay-02;
         }
       }
     }
