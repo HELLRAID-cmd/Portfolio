@@ -2,7 +2,7 @@ import { ArrowDownOutlined } from "@ant-design/icons";
 import { Typography, Button } from "antd";
 import { Routes, Route, Link } from "react-router-dom";
 import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
-import { HeroXO } from "./HeroGame/HeroXO";
+import { HeroXO } from "./HeroGame/X-O/HeroXO";
 import { HeroSnake } from "./HeroGame/HeroSnake";
 import "./Hero.scss";
 import { useState } from "react";
