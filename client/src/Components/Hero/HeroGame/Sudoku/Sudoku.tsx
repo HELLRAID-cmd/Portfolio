@@ -81,7 +81,10 @@ export const Sudoku = () => {
               </div>
             ))
           )}
-        <Button onClick={fetchBoard} className="sudoku-game__button">New Board</Button>
+          <div className="sudoku-game__buttons">
+            <Button onClick={fetchBoard} className="sudoku-game__button button">New Board</Button>
+            <Button onClick={fetchBoard} className="sudoku-game__button button">Rules of the game Sudoku</Button>
+          </div>
         </div>
       </div>
     </>
