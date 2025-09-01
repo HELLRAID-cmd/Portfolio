@@ -44,11 +44,14 @@ export const Hero = () => {
                   <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
                 </div>
 
+                <div className="hero__game-inner">
                 <Routes>
                   <Route path="/" element={<Sudoku />} />
                   <Route path="/HeroXO" element={<HeroXO />} />
                   <Route path="/HeroSnake" element={<HeroSnake />} />
                 </Routes>
+                </div>
+
               </Typography.Paragraph>
 
               <Button className="hero__wrapper-button" aria-label="Scroll down">
