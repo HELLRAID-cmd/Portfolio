@@ -1,0 +1,19 @@
+.button {
+  font-size: var(--f-size-14);
+  font-weight: var(--fw-medium);
+  border-color: transparent;
+  background-color: unset;
+  border-radius: var(--border-radius-20);
+  color: var(--c-white);
+  box-shadow: 2px 3px 4px -2px var(--c-white);
+  transition: box-shadow var(--transition-200),
+    border-color var(--transition-200), color var(--transition-200),
+    border-color var(--transition-200), color var(--transition-200);
+
+  &.ant-btn-default.ant-btn-default:hover {
+    background: unset;
+    color: var(--c-purple);
+    box-shadow: -2px -3px 4px -2px var(--c-black);
+    border-color: var(--c-purple);
+  }
+}
