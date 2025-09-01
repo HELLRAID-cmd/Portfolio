@@ -1,27 +1,39 @@
 import { useEffect, useState } from "react";
 import "./Sudoku.scss";
-import { Button, Spin } from "antd";
+import { Button, Spin, Modal } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
 export const Sudoku = () => {
+  const [open, setOpen] = useState(false);
   const [board, setBoard] = useState<number[][]>([]);
   const [boardCheck, setBoardCheck] = useState<number[][]>([]);
   const [isCellCorrect, setIsCellCorrect] = useState<boolean[][]>([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchBoard = async () => {
-    const response = await fetch("https://sudoku-api.vercel.app/api/dosuku");
-    const data = await response.json();
-    setBoard(data.newboard.grids[0].value);
-    setBoardCheck(data.newboard.grids[0].solution);
-    setIsCellCorrect(
-      data.newboard.grids[0].value.map((row) => row.map((cell) => cell !== 0))
-    );
+  const showModal = () => {
+    setOpen(true);
   };
 
-  useEffect(() => {
-    setLoading(false);
-  });
+  const handleCancel = () => {
+    setOpen(false);
+  };
+
+  const fetchBoard = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("https://sudoku-api.vercel.app/api/dosuku");
+      const data = await response.json();
+      setBoard(data.newboard.grids[0].value);
+      setBoardCheck(data.newboard.grids[0].solution);
+      setIsCellCorrect(
+        data.newboard.grids[0].value.map((row) => row.map((cell) => cell !== 0))
+      );
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     fetchBoard();
@@ -55,6 +67,7 @@ export const Sudoku = () => {
         <div className="sudoku-game__board">
           {loading ? (
             <Spin
+              className="sudoku-game__loading"
               indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />}
             />
           ) : (
@@ -81,12 +94,31 @@ export const Sudoku = () => {
               </div>
             ))
           )}
-          <div className="sudoku-game__buttons">
-            <Button onClick={fetchBoard} className="sudoku-game__button button">New Board</Button>
-            <Button onClick={fetchBoard} className="sudoku-game__button button">Rules of the game Sudoku</Button>
-          </div>
+        </div>
+        <div className="sudoku-game__buttons">
+          <Button onClick={fetchBoard} className="sudoku-game__button button">
+            New Board
+          </Button>
+          <Button onClick={showModal} className="sudoku-game__button button">
+            Rules of the game Sudoku
+          </Button>
         </div>
       </div>
+      <Modal
+        title="Rules of the game Sudoku"
+        className="sudoku-game__modal"
+        open={open}
+        closable={{ "aria-label": "Custom Close Button" }}
+        footer={[]}
+        onCancel={handleCancel}
+        centered
+      >
+        <p>
+          Sudoku is a 9x9 puzzle where you have to fill in the empty cells with
+          numbers from 1 to 9 so that no numbers are repeated in a row, column,
+          or in each small 3x3 square.
+        </p>
+      </Modal>
     </>
   );
 };
