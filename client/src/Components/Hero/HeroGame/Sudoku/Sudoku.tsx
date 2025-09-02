@@ -63,15 +63,15 @@ export const Sudoku = () => {
 
   return (
     <>
-      <div className="sudoku-game">
-        <div className="sudoku-game__board">
-          {loading ? (
-            <Spin
-              className="sudoku-game__loading"
-              indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />}
-            />
-          ) : (
-            board.map((row, rowIndex) => (
+      {loading ? (
+        <Spin
+          className="sudoku-game__loading"
+          indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />}
+        />
+      ) : (
+        <div className="sudoku-game">
+          <div className="sudoku-game__board">
+            {board.map((row, rowIndex) => (
               <div className="sudoku-game__row" key={rowIndex}>
                 {row.map((cell, coIndex) => {
                   const isInputIncorrect =
@@ -92,18 +92,18 @@ export const Sudoku = () => {
                   );
                 })}
               </div>
-            ))
-          )}
+            ))}
+          </div>
+          <div className="sudoku-game__buttons">
+            <Button onClick={fetchBoard} className="sudoku-game__button button">
+              New Board
+            </Button>
+            <Button onClick={showModal} className="sudoku-game__button button">
+              Rules of the game Sudoku
+            </Button>
+          </div>
         </div>
-        <div className="sudoku-game__buttons">
-          <Button onClick={fetchBoard} className="sudoku-game__button button">
-            New Board
-          </Button>
-          <Button onClick={showModal} className="sudoku-game__button button">
-            Rules of the game Sudoku
-          </Button>
-        </div>
-      </div>
+      )}
       <Modal
         title="Rules of the game Sudoku"
         className="sudoku-game__modal"
