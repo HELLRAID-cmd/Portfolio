@@ -9,10 +9,9 @@
 
   &__loading {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
   }
 
   &__row {
