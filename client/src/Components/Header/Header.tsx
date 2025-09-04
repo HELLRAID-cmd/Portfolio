@@ -28,7 +28,7 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#!">
+              <a className="header__menu-item-link" href="#about">
                 Skills
               </a>
             </li>
