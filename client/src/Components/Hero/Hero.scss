@@ -52,11 +52,11 @@
         }
 
         &-title::before {
-          background: linear-gradient(var(--c-purple), var(--c-white));
+          background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
         }
 
         &-title::after {
-          background: linear-gradient(var(--c-purple), var(--c-jaguar-dark));
+          background: linear-gradient(var(--c-purple) 65%, var(--c-jaguar-dark) 90%);
           opacity: 0;
           transition: opacity var(--transition-200) $delay-02;
         }
