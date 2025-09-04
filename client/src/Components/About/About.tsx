@@ -24,7 +24,7 @@ export const About = () => {
 
   return (
     <>
-      <section className="about-sect">
+      <section className="about-sect" id="about">
         <div className="about">
           <div className="container">
             <div className="about__wrapper">
