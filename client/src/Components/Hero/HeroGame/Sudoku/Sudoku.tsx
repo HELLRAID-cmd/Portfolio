@@ -9,6 +9,7 @@ export const Sudoku = () => {
   const [boardCheck, setBoardCheck] = useState<number[][]>([]);
   const [isCellCorrect, setIsCellCorrect] = useState<boolean[][]>([]);
   const [loading, setLoading] = useState(true);
+  const [lang, setLang] = useState("en");
 
   const showModal = () => {
     setOpen(true);
@@ -61,6 +62,10 @@ export const Sudoku = () => {
     }
   };
 
+  const handleLanguage = () => {
+    setLang((prev) => (prev === "ru" ? "en" : "ru"));
+  }
+
   return (
     <>
       {loading ? (
@@ -105,18 +110,20 @@ export const Sudoku = () => {
         </div>
       )}
       <Modal
-        title="Rules of the game Sudoku"
+        title={lang === "en" ? "Rules of the game Sudoku" : "Правила для игры в Судоку"}
         className="sudoku-game__modal"
         open={open}
         closable={{ "aria-label": "Custom Close Button" }}
-        footer={[]}
+        footer={[
+          <Button onClick={handleLanguage} aria-label="Перевести">
+            {lang === "en" ? "En" : "Ru"}
+          </Button>
+        ]}
         onCancel={handleCancel}
         centered
       >
         <p>
-          Sudoku is a 9x9 puzzle where you have to fill in the empty cells with
-          numbers from 1 to 9 so that no numbers are repeated in a row, column,
-          or in each small 3x3 square.
+          {lang === "en" ? "Sudoku is a 9x9 puzzle where you have to fill in the empty cells with numbers from 1 to 9 so that no numbers are repeated in a row, column, or in each small 3x3 square." : "Судоку — это головоломка размером 9x9, в которой вам нужно заполнить пустые клетки цифрами от 1 до 9 так, чтобы в строке, столбце или в каждом маленьком квадрате 3x3 цифры не повторялись."}
         </p>
       </Modal>
     </>
