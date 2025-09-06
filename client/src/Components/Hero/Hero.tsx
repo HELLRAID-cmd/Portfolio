@@ -8,7 +8,7 @@ import "./Hero.scss";
 import { useState } from "react";
 
 export const Hero = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("sudoku");
   
   return (
     <>
@@ -41,7 +41,6 @@ export const Hero = () => {
                 <div className="hero__game-links">
                   <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
                   <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
-                  <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
                 </div>
 
                 <div className="hero__game-inner">
