@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Modal, Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-// import { LoadingOutlined } from "@ant-design/icons";
 import "./X-O.scss";
 import Board from "./Board";
 import GameInfo from "./GameInfo";
-// import { EllipseXO, XXO } from "./icon/icon-x-o";
+import { EllipseXO, XXO } from "./icon/icon-x-o";
 
 const calculateWinner = (squares: (string | null)[]) => {
   const lines = [
@@ -33,6 +32,7 @@ export const HeroXO = () => {
   const [lang, setLang] = useState("en");
   const [squares, setSquares] = useState<(string | null)[]>(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
+  const [winnerState, setWinnerState] = useState(false);
 
   const handleClick = (index: number) => {
     const newSquares = squares.slice();
@@ -50,15 +50,20 @@ export const HeroXO = () => {
   const winner = calculateWinner(squares);
   let status: React.ReactNode;
 
+  useEffect(() => {
+    if(winner) {
+      setWinnerState(true);
+    }
+  }, [winner])
+
   if (winner) {
-    status = <>Winner {winner}</>
-  } else {
-    status = <>Next player {xIsNext ? "X" : "0"}</>
+    status = <div className="game-info__winner">Winner {winner === "X" ? <XXO/> : <EllipseXO/>}</div>
   }
 
   const resetGame = () => {
     setSquares(Array(9).fill(null));
     setXIsNext(true);
+    setWinnerState(false);
   }
 
   const showModal = () => {
@@ -84,10 +89,9 @@ export const HeroXO = () => {
         <div className="x-o-game">
           <div className="x-o-game__board">
             <Board squares={squares} onClick={handleClick}/>
-            <GameInfo status={status} onReset={resetGame}/>
           </div>
           <div className="x-o-game__buttons">
-            <Button className="x-o-game__button button">New Board</Button>
+            <GameInfo status={status} onReset={resetGame} winnerState={winnerState}/>
             <Button onClick={showModal} className="x-o-game__button button">
               Rules of the game x-o
             </Button>
