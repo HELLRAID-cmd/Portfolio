@@ -1,7 +1,6 @@
 @use "./variables" as *;
 
 .ant-typography a.link {
-  // all: unset;
   position: relative;
   padding: var(--padding-5-10);
   font-weight: var(--fw-medium);
@@ -15,11 +14,11 @@
     border-color var(--transition-200), color var(--transition-200);
 
   &.sudoku,
-  &.x-o,
-  &.snake {
+  &.x-o {
     color: var(--c-purple);
     box-shadow: -2px -3px 4px -2px var(--c-black);
     border-color: var(--c-purple);
+    max-width: 100px;
   }
 
   &:hover,
