@@ -89,10 +89,6 @@
         justify-content: center;
       }
 
-      &-link {
-        transition: width var(--transition-200);
-      }
-
       &-inner {
         display: flex;
         align-items: end;
