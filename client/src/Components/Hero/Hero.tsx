@@ -53,12 +53,12 @@ export const Hero = () => {
 
               </Typography.Paragraph>
 
-              <Button className="hero__wrapper-button" aria-label="Scroll down">
+              <a href="#about" className="hero__wrapper-link" aria-label="Scroll down">
                 <ArrowDownOutlined
-                  className="hero__wrapper-button-arrow"
+                  className="hero__wrapper-link-arrow"
                   height={40}
                 />
-              </Button>
+              </a>
             </div>
           </div>
         </div>
