@@ -1,6 +1,6 @@
-import "./styles/Reset.scss";
-import "./styles/container.scss";
-import "./styles/Theme.scss";
+import "./styles/_reset.scss"
+import "./styles/_container.scss";
+import "./styles/_theme.scss";
 import { Header } from "./Components/Header/Header";
 import { Layout } from "antd";
 import { Hero } from "./Components/Hero/Hero";
