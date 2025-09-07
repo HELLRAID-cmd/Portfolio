@@ -88,10 +88,11 @@ export const HeroXO = () => {
       ) : (
         <div className="x-o-game">
           <div className="x-o-game__board">
-            <Board squares={squares} onClick={handleClick}/>
+            <Board squares={squares} winnerState={winnerState} onClick={handleClick}/>
+            <GameInfo status={status}/>
           </div>
           <div className="x-o-game__buttons">
-            <GameInfo status={status} onReset={resetGame} winnerState={winnerState}/>
+            <Button onClick={resetGame} className={`game-info__button button ${winnerState ? "game-info__button--winner" : ""}` }aria-label="reset game">Reset game</Button>
             <Button onClick={showModal} className="x-o-game__button button">
               Rules of the game x-o
             </Button>
