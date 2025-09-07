@@ -8,9 +8,14 @@
   &__board {
     max-height: 360px;
     height: 100%;
+
+    .winner {
+      filter: blur(5px);
+    }
   }
 
   .board {
+    position: relative;
 
     &-row {
       display: flex;
@@ -20,11 +25,14 @@
         height: 120px;
         padding: 0;
         background-color: transparent;
-        // border: none;
         border-radius: unset;
+        border: 1px solid var(--c-white);
 
+        &:hover {
+          background-color: var(--c-white-20);
+          border-color: var(--c-white);
+        }
       }
-
     }
   }
 

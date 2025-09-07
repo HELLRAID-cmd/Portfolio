@@ -4,9 +4,10 @@ import { EllipseXO, XXO } from "./icon/icon-x-o";
 type BoardProps = {
   squares: React.ReactNode[];
   onClick: (index: number) => void;
+  winnerState: boolean;
 };
 
-const Board = ({ squares, onClick }: BoardProps) => {
+const Board = ({ squares, onClick, winnerState }: BoardProps) => {
   const renderSquare = (index: number) => {
     return (
       <Square
@@ -23,7 +24,7 @@ const Board = ({ squares, onClick }: BoardProps) => {
   };
 
   return (
-    <div className="board">
+    <div className={`board ${winnerState ? "winner" : ""}`}>
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
