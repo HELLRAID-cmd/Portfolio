@@ -27,7 +27,7 @@ export const Sudoku = () => {
       setBoard(data.newboard.grids[0].value);
       setBoardCheck(data.newboard.grids[0].solution);
       setIsCellCorrect(
-        data.newboard.grids[0].value.map((row) => row.map((cell) => cell !== 0))
+        data.newboard.grids[0].value.map((row: number[]) => row.map((cell: number) => cell !== 0))
       );
     } catch (err) {
       console.error(err);
