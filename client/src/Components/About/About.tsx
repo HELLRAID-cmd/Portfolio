@@ -1,6 +1,6 @@
 import { Typography, Card, Timeline } from "antd";
 import "./About.scss";
-import { skills } from "../info";
+import { skills } from "./About-skills";
 
 export const About = () => {
   const Cards = () => {
