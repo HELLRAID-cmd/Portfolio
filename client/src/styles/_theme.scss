@@ -108,6 +108,13 @@ html {
 
     }
 
+    .x-o-game {
+
+      .square-button {
+        border-color: var(--c-jaguar-dark);
+      }
+    }
+
     .about {
       &__card {
         &-timeline-desc {
