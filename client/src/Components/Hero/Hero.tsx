@@ -3,12 +3,11 @@ import { Typography, Button } from "antd";
 import { Routes, Route, Link } from "react-router-dom";
 import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
 import { HeroXO } from "./HeroGame/X-O/X-O";
-import { HeroSnake } from "./HeroGame/HeroSnake";
 import "./Hero.scss";
 import { useState } from "react";
 
 export const Hero = () => {
-  const [active, setActive] = useState("sudoku");
+  const [active, setActive] = useState("");
   
   return (
     <>
@@ -47,7 +46,6 @@ export const Hero = () => {
                 <Routes>
                   <Route path="/" element={<Sudoku />} />
                   <Route path="/HeroXO" element={<HeroXO />} />
-                  <Route path="/HeroSnake" element={<HeroSnake />} />
                 </Routes>
                 </div>
 
