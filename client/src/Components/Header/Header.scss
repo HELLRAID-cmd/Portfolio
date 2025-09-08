@@ -6,6 +6,7 @@
   padding: var(--padding-15-0);
   background-color: var(--c-jaguar-dark);
   transition: background-color var(--transition-200) $delay-02;
+  box-shadow: 0 0 10px -1px var(--c-black);
   z-index: 100;
 
   &__wrapper {
