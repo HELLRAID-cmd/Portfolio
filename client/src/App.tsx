@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import "./styles/_reset.scss";
+=======
+import "./styles/_reset.scss"
+>>>>>>> main
 import "./styles/_container.scss";
 import "./styles/_theme.scss";
 import { Header } from "./Components/Header/Header";

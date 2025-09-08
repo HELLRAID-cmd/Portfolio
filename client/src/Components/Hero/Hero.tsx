@@ -2,8 +2,7 @@ import { ArrowDownOutlined } from "@ant-design/icons";
 import { Typography, Button } from "antd";
 import { Routes, Route, Link } from "react-router-dom";
 import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
-import { HeroXO } from "./HeroGame/X-O/HeroXO";
-import { HeroSnake } from "./HeroGame/HeroSnake";
+import { HeroXO } from "./HeroGame/X-O/X-O";
 import "./Hero.scss";
 import { useState } from "react";
 
@@ -41,25 +40,23 @@ export const Hero = () => {
                 <div className="hero__game-links">
                   <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
                   <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
-                  <Link to="/HeroSnake" onClick={() => setActive("snake")} className={`hero__game-link link ${active === "snake" ? "snake" : ""}`}>Snake</Link>
                 </div>
 
                 <div className="hero__game-inner">
                 <Routes>
                   <Route path="/" element={<Sudoku />} />
                   <Route path="/HeroXO" element={<HeroXO />} />
-                  <Route path="/HeroSnake" element={<HeroSnake />} />
                 </Routes>
                 </div>
 
               </Typography.Paragraph>
 
-              <Button className="hero__wrapper-button" aria-label="Scroll down">
+              <a href="#about" className="hero__wrapper-link" aria-label="Scroll down">
                 <ArrowDownOutlined
-                  className="hero__wrapper-button-arrow"
+                  className="hero__wrapper-link-arrow"
                   height={40}
                 />
-              </Button>
+              </a>
             </div>
           </div>
         </div>

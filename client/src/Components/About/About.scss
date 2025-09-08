@@ -36,7 +36,8 @@
         height: 100%;
         border-radius: var(--border-radius-20);
         transform: translate(-50%, -50%);
-        transition: transform var(--transition-200), box-shadow var(--transition-200);
+        transition: transform var(--transition-200),
+          box-shadow var(--transition-200);
       }
 
       &:hover::before {
@@ -50,11 +51,13 @@
       &-card {
         border: none;
         background-color: var(--c-jaguar-dark);
-        padding: 34px 18px;
+        padding: 34px 18px 5px 18px;
         box-shadow: 0 0 10px -3px var(--c-white);
         border-radius: var(--border-radius-20);
-        max-height: 466px;
-        transition: transform var(--transition-200), box-shadow var(--transition-200), background-color var(--transition-200) $delay-02;
+        height: 100%;
+        transition: transform var(--transition-200),
+          box-shadow var(--transition-200),
+          background-color var(--transition-200) $delay-02;
 
         &:hover {
           transform: scale(1.02);
@@ -68,8 +71,10 @@
 
       &-timeline {
         &-item {
-          padding: var(--padding-0);
           padding: 0 0 22px 0;
+          &-last {
+            padding: 0;
+          }
           &-tail,
           &-head {
             background-color: var(--c-purple);
