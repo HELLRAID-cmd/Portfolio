@@ -1,0 +1,21 @@
+.project {
+
+  &__card {
+    border-radius: var(--border-radius-20);
+    
+    &-img {
+      border-radius: var(--border-radius-20);
+    }
+    
+    .ant-card-body {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
