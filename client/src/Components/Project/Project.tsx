@@ -12,18 +12,64 @@ export const Project = () => {
                 My Portfolio
               </Typography.Title>
 
-                <Card className="project__card">
-                  <img className="project__card-img" src="https://fotorelax.ru/wp-content/uploads/2020/12/20201227-Photos-of-cats-03_1-min.jpg" width={200} alt="img" />
-                  <div className="project__card-inner">
-                    <p className="project__card-inner-title">
-                      title
-                    </p>
-                    <div className="project__card-inner-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum sit quam eligendi tempora vel cumque illum inventore unde voluptatum ipsum?</div>
-                    <div className="project__card-technologies">
-                      <img className="project__card-technologies-img" src="https://fotorelax.ru/wp-content/uploads/2020/12/20201227-Photos-of-cats-03_1-min.jpg" width={40} alt="technologies" />
+              <Card className="project__card">
+                <picture>
+                  <source
+                    media="(max-width: 1000px)"
+                    src="/img/project/project.jpg"
+                    width={200}
+                  />
+                  <img
+                    className="project__card-img"
+                    src="./public/img/project/project.jpg"
+                    width={200}
+                    alt="img"
+                  />
+                </picture>
+                <div className="project__card-inner">
+                  <p className="project__card-inner-title">
+                    Briaton Final Work
+                  </p>
+                  <p className="project__card-inner-desc">
+                    The final assignment for the Skillbox courses includes
+                    an&nbsp;online store of&nbsp;various types
+                    of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
+                  </p>
+                  <p className="project__card-inner-technologies">
+                    Technologies: TS, React, Vite, Scss, Just Validate
+                  </p>
+                  <div className="project__card-technologies">
+                    <div className="project__card-technologies-img">
+                      <img
+                        src="./public/img/project/icons/React.png"
+                        width={35}
+                        alt="img"
+                      />
+                    </div>
+                    <div className="project__card-technologies-img">
+                      <img
+                        src="./public/img/project/icons/TypeScript.png"
+                        width={35}
+                        alt="img"
+                      />
+                    </div>
+                    <div className="project__card-technologies-img">
+                      <img
+                        src="./public/img/project/icons/Sass.png"
+                        width={35}
+                        alt="img"
+                      />
+                    </div>
+                    <div className="project__card-technologies-img">
+                      <img
+                        src="./public/img/project/icons/Vite.js.png"
+                        width={35}
+                        alt="img"
+                      />
                     </div>
                   </div>
-                </Card>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
