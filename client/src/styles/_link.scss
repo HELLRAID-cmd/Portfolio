@@ -28,3 +28,17 @@
     border-color: var(--c-purple);
   }
 }
+
+.link-title {
+  font-weight: var(--fw-medium);
+  color: var(--c-white);
+  cursor: pointer;
+  transition: box-shadow var(--transition-200),
+    border-color var(--transition-200), color var(--transition-200);
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--c-purple);
+  }
+}
