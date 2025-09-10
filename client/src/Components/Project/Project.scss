@@ -1,20 +1,53 @@
+@use "../../styles/variables" as *;
+
 .project {
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
   &__card {
     border-radius: var(--border-radius-20);
     background-color: var(--c-jaguar-dark);
     border: none;
     box-shadow: 0 0 10px -3px var(--c-white);
     color: var(--c-white);
+    transition: transform var(--transition-200),
+      box-shadow var(--transition-200),
+      background-color var(--transition-200) $delay-02;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px 5px var(--c-white-50);
+    }
 
     &-img {
       border-radius: var(--border-radius-20);
       height: 100%;
+      width: 100%;
     }
 
     //* inner
     &-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
       &-title {
         font-size: var(--f-size-24);
+        text-align: left;
+      }
+    }
+
+    //* text
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &-desc {
+        font-size: var(--f-size-16);
       }
     }
 
@@ -22,12 +55,11 @@
     &-technologies {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
 
       &-img {
         padding: 15px;
         position: relative;
-        // transition: transform var(--transition-200);
         z-index: 5;
         cursor: pointer;
 
@@ -68,8 +100,10 @@
 
     .ant-card {
       &-body {
-        display: flex;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        align-items: center;
+        gap: 30px;
 
         &::before,
         &::after {
