@@ -1,5 +1,6 @@
 import { Card, Typography } from "antd";
 import "./Project.scss";
+import "../../styles/_link.scss";
 
 export const Project = () => {
   return (
@@ -22,50 +23,56 @@ export const Project = () => {
                   <img
                     className="project__card-img"
                     src="./public/img/project/project.jpg"
-                    width={200}
+                    width={350}
                     alt="img"
                   />
                 </picture>
                 <div className="project__card-inner">
-                  <p className="project__card-inner-title">
+                  <a
+                    className="project__card-inner-title link-title"
+                    href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
+                    target="_blank"
+                  >
                     Briaton Final Work
-                  </p>
-                  <p className="project__card-inner-desc">
-                    The final assignment for the Skillbox courses includes
-                    an&nbsp;online store of&nbsp;various types
-                    of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
-                  </p>
-                  <p className="project__card-inner-technologies">
-                    Technologies: TS, React, Vite, Scss, Just Validate
-                  </p>
-                  <div className="project__card-technologies">
-                    <div className="project__card-technologies-img">
-                      <img
-                        src="./public/img/project/icons/React.png"
-                        width={35}
-                        alt="img"
-                      />
-                    </div>
-                    <div className="project__card-technologies-img">
-                      <img
-                        src="./public/img/project/icons/TypeScript.png"
-                        width={35}
-                        alt="img"
-                      />
-                    </div>
-                    <div className="project__card-technologies-img">
-                      <img
-                        src="./public/img/project/icons/Sass.png"
-                        width={35}
-                        alt="img"
-                      />
-                    </div>
-                    <div className="project__card-technologies-img">
-                      <img
-                        src="./public/img/project/icons/Vite.js.png"
-                        width={35}
-                        alt="img"
-                      />
+                  </a>
+                  <div className="project__card-text">
+                    <p className="project__card-text-desc">
+                      The final assignment for the Skillbox courses includes
+                      an&nbsp;online store of&nbsp;various types
+                      of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
+                    </p>
+                    <p className="project__card-text-technologies">
+                      Technologies: TS, React, Vite, Scss, Just Validate.
+                    </p>
+                    <div className="project__card-technologies">
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/React.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/TypeScript.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Sass.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Vite.js.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
