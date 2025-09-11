@@ -66,6 +66,11 @@ img, svg {
 	height: auto;
 }
 
+picture {
+  display: block;
+  position: relative;
+}
+
 address {
   font-style: normal;
 }

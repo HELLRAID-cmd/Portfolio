@@ -9,26 +9,35 @@ export const Project = () => {
         <div className="project">
           <div className="container">
             <div className="project__wrapper">
-              <Typography.Title level={3} className="about__title">
+              <Typography.Title level={2} className="project__title">
                 My Portfolio
               </Typography.Title>
 
               <div className="project__cards">
                 <Card className="project__card">
-                  <picture>
+                  <div className="project__card-info">
+                    <Typography.Title
+                      level={3}
+                      className="project__card-info-title"
+                    >
+                      Briaton Final Work
+                    </Typography.Title>
+                    <span className="project__card-info-date">22.05.2025</span>
+                  </div>
+                  <picture className="project__card-picture project-img">
                     <source
                       media="(max-width: 1000px)"
                       src="/img/project/project.jpg"
                       width={200}
                     />
                     <img
-                      className="project__card-img"
+                      className="project__card-picture-img"
                       src="./public/img/project/project.jpg"
                       width={350}
                       alt="img"
                     />
                   </picture>
-                  <div className="project__card-inner">
+                  <div className="project__card-inner project-clip">
                     <a
                       className="project__card-inner-title link-title"
                       href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
@@ -43,101 +52,125 @@ export const Project = () => {
                         of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
                       </p>
                       <p className="project__card-text-technologies">
-                        Technologies: TS, React, Vite, Scss, Just Validate.
+                        Technologies: React, TS, Scss, Vite, Just Validate.
                       </p>
-                      <div className="project__card-technologies">
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/React.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/TypeScript.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/Sass.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/Vite.js.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
+                    </div>
+                    <div className="project__card-technologies">
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/React.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/TypeScript.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Sass.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Vite.js.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/JustValidate.png"
+                          width={35}
+                          alt="img"
+                        />
                       </div>
                     </div>
                   </div>
                 </Card>
                 <Card className="project__card">
-                  <picture>
+                  <div className="project__card-info">
+                    <Typography.Title
+                      level={3}
+                      className="project__card-info-title"
+                    >
+                      Crypto Project
+                    </Typography.Title>
+                    <span className="project__card-info-date">22.08.2025</span>
+                  </div>
+                  <picture className="project__card-picture project-img">
                     <source
                       media="(max-width: 1000px)"
                       src="/img/project/project.jpg"
                       width={200}
                     />
                     <img
-                      className="project__card-img"
+                      className="project__card-picture-img"
                       src="./public/img/project/project.jpg"
                       width={350}
                       alt="img"
                     />
                   </picture>
-                  <div className="project__card-inner">
+                  <div className="project__card-inner project-clip">
                     <a
                       className="project__card-inner-title link-title"
                       href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
                       target="_blank"
                     >
-                      Briaton Final Work
+                      Crypto Project
                     </a>
                     <div className="project__card-text">
                       <p className="project__card-text-desc">
-                        The final assignment for the Skillbox courses includes
-                        an&nbsp;online store of&nbsp;various types
-                        of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
+                        A&nbsp;small app for practicing working with state and
+                        calculations. The user can &laquo;buy&raquo;
+                        cryptocurrency at&nbsp;any price and quantity, and then
+                        track how much he&nbsp;earned or&nbsp;lost.
                       </p>
                       <p className="project__card-text-technologies">
-                        Technologies: TS, React, Vite, Scss, Just Validate.
+                        Technologies: React, TS, Scss, Vite, Antd.
                       </p>
-                      <div className="project__card-technologies">
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/React.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/TypeScript.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/Sass.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="project__card-technologies-img">
-                          <img
-                            src="./public/img/project/icons/Vite.js.png"
-                            width={35}
-                            alt="img"
-                          />
-                        </div>
+                    </div>
+                    <div className="project__card-technologies">
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/React.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/TypeScript.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Sass.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Vite.js.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/AntD.png"
+                          width={35}
+                          alt="img"
+                        />
                       </div>
                     </div>
                   </div>
