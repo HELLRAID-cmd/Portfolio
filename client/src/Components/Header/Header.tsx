@@ -33,8 +33,8 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#!">
-                Portfolio
+              <a className="header__menu-item-link" href="#project">
+                Project
               </a>
             </li>
             <li className="header__menu-item">
