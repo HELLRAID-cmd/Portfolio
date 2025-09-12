@@ -10,7 +10,7 @@ export const Project = () => {
           <div className="container">
             <div className="project__wrapper">
               <Typography.Title level={2} className="project__title">
-                My Portfolio
+                My Project
               </Typography.Title>
 
               <div className="project__cards">
