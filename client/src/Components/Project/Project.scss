@@ -57,10 +57,12 @@
 
     //* picture
     &-picture {
+      max-width: 500px;
+      width: 100%;
       &-img {
-        max-width: 350px;
         height: 100%;
         border-radius: var(--border-radius-20);
+        transition: max-width var(--transition-200);
       }
     }
 
@@ -130,7 +132,12 @@
           height: 194px;
           transform: translate(0, -50%) scale(1);
           transition: transform var(--transition-200),
-            left var(--transition-200), height var(--transition-200);
+            left var(--transition-200), height var(--transition-200), width var(--transition-200);
+        }
+
+        &:hover .project__card-picture-img {
+          max-width: 350px;
+          transition: max-width var(--transition-200);
         }
 
         &:hover .project__card-info {
@@ -160,15 +167,4 @@
     transition: transform var(--transition-200), left var(--transition-200),
       height var(--transition-200);
   }
-
-  // &-img {
-  //   position: absolute;
-  //   width: 450px;
-  //   height: 200px;
-  //   top: 50%;
-  //   right: 0;
-  //   transform: translate(100%, -50%);
-  //   transition: transform var(--transition-200), width var(--transition-200),
-  //     height var(--transition-200);
-  // }
 }
