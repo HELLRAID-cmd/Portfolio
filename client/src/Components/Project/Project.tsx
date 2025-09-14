@@ -33,7 +33,7 @@ export const Project = () => {
                     <img
                       className="project__card-picture-img"
                       src="./public/img/project/project.jpg"
-                      width={350}
+                      width={500}
                       alt="img"
                     />
                   </picture>
@@ -107,13 +107,14 @@ export const Project = () => {
                   <picture className="project__card-picture project-img">
                     <source
                       media="(max-width: 1000px)"
-                      src="/img/project/project.jpg"
+                      srcSet="/img/project/cryptoProject@2x.jpg"
                       width={200}
                     />
                     <img
                       className="project__card-picture-img"
-                      src="./public/img/project/project.jpg"
-                      width={350}
+                      src="./public/img/project/cryptoProject.jpg"
+                      srcSet="./public/img/project/cryptoProject.jpg 2x"
+                      width={500}
                       alt="img"
                     />
                   </picture>
