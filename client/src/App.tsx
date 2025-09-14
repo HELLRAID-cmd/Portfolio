@@ -6,6 +6,7 @@ import { Layout } from "antd";
 import { Hero } from "./Components/Hero/Hero";
 import { About } from "./Components/About/About";
 import { Project } from "./Components/Project/Project";
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Project />
       </main>
+        <Footer />
     </Layout>
   );
 }
