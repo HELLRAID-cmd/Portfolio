@@ -11,7 +11,7 @@ export const Hero = () => {
   
   return (
     <>
-      <section className="hero-sect">
+      <section className="hero-sect" id="about">
         <div className="hero">
           <div className="container">
             <div className="hero__wrapper">
