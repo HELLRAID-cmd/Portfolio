@@ -11,7 +11,6 @@ export const skills = [
     { id: 7, desc: "Experience creating design in figma" },
     { id: 8, desc: "React" },
     { id: 9, desc: "Git (GitHub, GitLab)" },
-    { id: 5, desc: "Studied at courses from Skillbox" },
   ],
   [
     { id: 6, desc: "I approach my work responsibly." },
