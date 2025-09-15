@@ -3,7 +3,7 @@ import "./Footer.scss";
 
 export const Footer = () => {
   return (
-    <footer className="footer" id="contancts">
+    <footer className="footer" id="contacts">
       <div className="container">
         <div className="footer__wrapper">
             <Typography.Title level={4} className="footer__title">
