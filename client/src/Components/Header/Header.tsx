@@ -23,12 +23,12 @@ export const Header = () => {
           </a>
           <ul className="header__menu">
             <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#!">
+              <a className="header__menu-item-link" href="#about">
                 About
               </a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#about">
+              <a className="header__menu-item-link" href="#skills">
                 Skills
               </a>
             </li>
@@ -38,12 +38,7 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#!">
-                Work Experience
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a className="header__menu-item-link" href="#!">
+              <a className="header__menu-item-link" href="#contacts">
                 Contacts
               </a>
             </li>
