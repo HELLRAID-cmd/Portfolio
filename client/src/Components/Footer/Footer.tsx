@@ -6,9 +6,7 @@ export const Footer = () => {
     <footer className="footer" id="contacts">
       <div className="container">
         <div className="footer__wrapper">
-            <Typography.Title level={4} className="footer__title">
-              Interested in my skills? Let’s get in touch!
-            </Typography.Title>
+          <h4 className="footer__title">Interested in my skills? Let’s get in touch!</h4>
           <div className="footer__social">
             <ul className="footer__social-list">
               <li className="footer__social-item">
