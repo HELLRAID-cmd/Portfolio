@@ -9,7 +9,7 @@
     gap: 40px;
   }
 
-  &__title.ant-typography {
+  &__title {
     font-size: var(--f-size-h2);
     color: var(--c-purple);
     margin: 0 0 50px 0;
@@ -42,7 +42,7 @@
       opacity: 1;
       transition: opacity var(--transition-200) $delay-02;
 
-      &-title.ant-typography {
+      &-title {
         font-size: var(--f-size-h3);
         margin: 0;
         color: var(--c-purple);
