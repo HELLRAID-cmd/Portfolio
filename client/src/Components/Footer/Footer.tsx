@@ -1,4 +1,3 @@
-import { Typography } from "antd";
 import "./Footer.scss";
 
 export const Footer = () => {
