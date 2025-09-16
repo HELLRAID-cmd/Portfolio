@@ -1,4 +1,3 @@
-import { ArrowDownOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { Routes, Route, Link } from "react-router-dom";
 import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
