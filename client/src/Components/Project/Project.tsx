@@ -1,4 +1,4 @@
-import { Card, Typography } from "antd";
+import { Card } from "antd";
 import "./Project.scss";
 import "../../styles/_link.scss";
 
@@ -9,19 +9,11 @@ export const Project = () => {
         <div className="project">
           <div className="container">
             <div className="project__wrapper">
-              <Typography.Title level={2} className="project__title">
-                My Project
-              </Typography.Title>
-
+              <h2 className="project__title">My Project</h2>
               <div className="project__cards">
                 <Card className="project__card">
                   <div className="project__card-info">
-                    <Typography.Title
-                      level={3}
-                      className="project__card-info-title"
-                    >
-                      Briaton Final Work
-                    </Typography.Title>
+                    <h3 className="project__card-info-title">Briaton Final Work</h3>
                     <span className="project__card-info-date">22.05.2025</span>
                   </div>
                   <picture className="project__card-picture project-img">
@@ -96,12 +88,7 @@ export const Project = () => {
                 </Card>
                 <Card className="project__card">
                   <div className="project__card-info">
-                    <Typography.Title
-                      level={3}
-                      className="project__card-info-title"
-                    >
-                      Crypto Project
-                    </Typography.Title>
+                    <h3 className="project__card-info-title">Crypto Project</h3>
                     <span className="project__card-info-date">22.08.2025</span>
                   </div>
                   <picture className="project__card-picture project-img">
