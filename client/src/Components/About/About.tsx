@@ -1,4 +1,4 @@
-import { Typography, Card, Timeline } from "antd";
+import { Card, Timeline } from "antd";
 import "./About.scss";
 import { skills } from "./About-skills";
 
@@ -28,9 +28,7 @@ export const About = () => {
         <div className="about">
           <div className="container">
             <div className="about__wrapper">
-              <Typography.Title level={3} className="about__title">
-                Professional skills
-              </Typography.Title>
+              <h3 className="about__title">Professional skills</h3>
               <div className="about__card">
                 <Cards />
               </div>
