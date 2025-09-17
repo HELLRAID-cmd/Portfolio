@@ -5,7 +5,7 @@ import { HeaderStar } from "./HeaderStar";
 import { useTheme } from "../Theme/useTheme";
 
 export const Header = () => {
-  const {theme, iconTheme, toggleTheme} = useTheme()
+  const { theme, iconTheme, toggleTheme } = useTheme();
 
   return (
     <header className="header">
@@ -43,15 +43,24 @@ export const Header = () => {
               </a>
             </li>
           </ul>
-          <div className="header__theme" onClick={toggleTheme}>
-            <Button
-              className={`header__theme-button ${
-                theme === "dark" ? "active" : ""
-              }`}
-            >
-              {iconTheme === "dark" ? <SunFilled className="header__theme-icon" /> : <MoonFilled className="header__theme-icon"/>}
-            </Button>
-            <HeaderStar className={`header__theme-icon-star ${iconTheme}`}/>
+          <div className="header__buttons">
+            <div className="header__theme" onClick={toggleTheme}>
+              <Button
+                className={`header__theme-button ${
+                  theme === "dark" ? "active" : ""
+                }`}
+              >
+                {iconTheme === "dark" ? (
+                  <SunFilled className="header__theme-icon" />
+                ) : (
+                  <MoonFilled className="header__theme-icon" />
+                )}
+              </Button>
+              <HeaderStar className={`header__theme-icon-star ${iconTheme}`} />
+            </div>
+            <div className="header__burger">
+              <Button className="header__burger-btn"></Button>
+            </div>
           </div>
         </div>
       </div>
