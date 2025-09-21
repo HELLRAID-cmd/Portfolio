@@ -31,7 +31,7 @@ html {
       }
 
       &__menu-item-link {
-        color: var(--c-jaguar-dark);
+        transition: color var(--transition-200) $delay-02;
 
         &:hover {
           color: var(--c-purple);
@@ -84,14 +84,12 @@ html {
       }
 
       .hero__text {
-        &-wrapper {
-          &-title::after {
-            opacity: 1;
-          }
+        &-title::before {
+          opacity: 0;
+        }
 
-          &-desc {
-            color: var(--c-jaguar-dark);
-          }
+        &-title::after {
+          opacity: 1;
         }
       }
     }
@@ -112,13 +110,6 @@ html {
     }
 
     .about {
-      &__card {
-        &-timeline-desc {
-          color: var(--c-jaguar-dark);
-          transition: color var(--transition-200) $delay-02;
-        }
-      }
-
       .ant {
         &-card {
           background-color: var(--c-white-50);
@@ -138,6 +129,14 @@ html {
           box-shadow var(--transition-200),
           background-color var(--transition-200) $delay-02;
       }
+    }
+
+    a,
+    p,
+    span,
+    h2 {
+      color: var(--c-jaguar-dark);
+      transition: color var(--transition-200) $delay-02;
     }
   }
   &.dark {
