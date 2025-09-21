@@ -51,7 +51,7 @@
         padding: var(--padding-5-10);
         color: var(--c-white);
         border-radius: var(--border-radius-16);
-        transition: color var(--transition-200),
+        transition: color var(--transition-200) $delay-02,
           border-color var(--transition-200), transform var(--transition-200);
 
         &::before {
