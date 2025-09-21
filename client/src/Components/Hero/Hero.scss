@@ -55,6 +55,7 @@
 
     &-title::before {
       background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
+      transition: opacity var(--transition-200) $delay-02;
     }
 
     &-title::after {
