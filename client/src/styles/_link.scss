@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-.link {
+.ant-typography a.link {
   position: relative;
   padding: var(--padding-5-10);
   font-weight: var(--fw-medium);
