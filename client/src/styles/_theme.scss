@@ -97,21 +97,24 @@ html {
     }
 
     .sudoku {
-
       &-game {
-
         &__cell {
           border-color: var(--c-gray);
           color: var(--c-jaguar-dark);
         }
       }
+    }
 
+    .x-o-game {
+      .square-button {
+        border-color: var(--c-jaguar-dark);
+      }
     }
 
     .about {
       &__card {
         &-timeline-desc {
-          color: var(--c-purple);
+          color: var(--c-jaguar-dark);
           transition: color var(--transition-200) $delay-02;
         }
       }
@@ -124,6 +127,16 @@ html {
             box-shadow var(--transition-200),
             background-color var(--transition-200) $delay-02;
         }
+      }
+    }
+
+    .project {
+      &__card {
+        background-color: var(--c-white-50);
+        box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
+        transition: transform var(--transition-200),
+          box-shadow var(--transition-200),
+          background-color var(--transition-200) $delay-02;
       }
     }
   }
