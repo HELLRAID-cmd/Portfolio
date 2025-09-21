@@ -5,7 +5,7 @@
 }
 
 .about {
-  &__title {
+  &__title.ant-typography {
     font-size: var(--f-size-h3);
     color: var(--c-purple);
     margin: 0 0 50px 0;
