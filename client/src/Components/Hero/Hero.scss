@@ -75,72 +75,7 @@
       }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    &-title {
-      position: relative;
-      color: transparent;
-    }
-
-    &-title,
-    &-desc {
-      font-weight: var(--fw-regular);
-      line-height: var(--lh-44);
-      color: var(--c-white);
-      margin: 0;
-    }
-
-    &-title {
-      font-size: var(--f-size-h1);
-    }
-
-    &-desc {
-      font-size: var(--f-size-h2);
-      transition: color var(--transition-200) $delay-02;
-    }
-
-    &-title::before {
-      background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
-      transition: opacity var(--transition-200) $delay-02;
-    }
-
-    &-title::after {
-      background: linear-gradient(
-        var(--c-purple) 65%,
-        var(--c-jaguar-dark) 90%
-      );
-      opacity: 0;
-      transition: opacity var(--transition-200) $delay-02;
-    }
-
-    &-title::before,
-    &-title::after {
-      content: attr(data-text);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: absolute;
-      inset: 0;
-    }
-  }
-
-  &__game {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 360px;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    position: relative;
-
-    // Links
-    &-links {
-=======
     .hero__game {
->>>>>>> footer
-=======
-    .hero__game {
->>>>>>> hero
       display: flex;
       flex-direction: column;
       gap: 20px;
