@@ -28,50 +28,50 @@
         flex-direction: column;
         gap: 8px;
         margin: 0;
+      }
 
-        &-title {
-          position: relative;
-          color: transparent;
-        }
+      &-title {
+        position: relative;
+        color: transparent;
+      }
 
-        &-title,
-        &-desc {
-          font-weight: var(--fw-regular);
-          line-height: var(--lh-44);
-          color: var(--c-white);
-          margin: 0;
-        }
+      &-title,
+      &-desc {
+        font-weight: var(--fw-regular);
+        line-height: var(--lh-44);
+        color: var(--c-white);
+        margin: 0;
+      }
 
-        &-title {
-          font-size: var(--f-size-h1);
-        }
+      &-title {
+        font-size: var(--f-size-h1);
+      }
 
-        &-desc {
-          font-size: var(--f-size-h2);
-          transition: color var(--transition-200) $delay-02;
-        }
+      &-desc {
+        font-size: var(--f-size-h2);
+        transition: color var(--transition-200) $delay-02;
+      }
 
-        &-title::before {
-          background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
-        }
+      &-title::before {
+        background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
+      }
 
-        &-title::after {
-          background: linear-gradient(
-            var(--c-purple) 65%,
-            var(--c-jaguar-dark) 90%
-          );
-          opacity: 0;
-          transition: opacity var(--transition-200) $delay-02;
-        }
+      &-title::after {
+        background: linear-gradient(
+          var(--c-purple) 65%,
+          var(--c-jaguar-dark) 90%
+        );
+        opacity: 0;
+        transition: opacity var(--transition-200) $delay-02;
+      }
 
-        &-title::before,
-        &-title::after {
-          content: attr(data-text);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          position: absolute;
-          inset: 0;
-        }
+      &-title::before,
+      &-title::after {
+        content: attr(data-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        inset: 0;
       }
     }
 
