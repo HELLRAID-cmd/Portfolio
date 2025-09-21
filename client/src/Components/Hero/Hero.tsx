@@ -14,6 +14,7 @@ export const Hero = () => {
       <section className="hero-sect">
         <div className="hero">
           <div className="container">
+            
             <div className="hero__wrapper">
               <Typography.Paragraph className="hero__text">
                 <Typography.Paragraph className="hero__text-wrapper">
