@@ -15,10 +15,6 @@
   --ff-main: "PTSans", "Arial", sans-serif;
   --ff-secondary: "Arsenal", "Arial", sans-serif;
 
-  // Viewport
-  --vp-tablet: 1023px;
-  --vp-mobile: 767px;
-
   // Animation
   --transition-200: ease-in 0.2s;
 
@@ -60,3 +56,7 @@
 
 // Dealy
 $delay-02: 0.2s;
+
+// Viewport
+$vp-tablet: 1023px;
+$vp-mobile: 767px;
