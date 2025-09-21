@@ -13,7 +13,6 @@ export const Hero = () => {
       <section className="hero-sect" id="about">
         <div className="hero">
           <div className="container">
-            
             <div className="hero__wrapper">
               <div className="hero__text">
                 <div className="hero__text-wrapper">
