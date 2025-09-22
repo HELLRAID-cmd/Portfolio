@@ -19,8 +19,8 @@
     .hero__text {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 55px;
+      align-items: flex-start;
+      gap: 20px;
       margin: 0;
 
       &-wrapper {
