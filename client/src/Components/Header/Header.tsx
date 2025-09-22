@@ -74,7 +74,7 @@ export const Header = () => {
                 onClick={showDrawer}
               ></Button>
               <Drawer
-                title="Basic Drawer"
+                title="Menu"
                 closable={{ "aria-label": "Close Button" }}
                 rootClassName="header__drawer"
                 onClose={onClose}
