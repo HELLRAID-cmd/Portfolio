@@ -131,10 +131,7 @@ html {
       }
     }
 
-    a,
-    p,
-    span,
-    h2 {
+    a, p, span, h2 {
       color: var(--c-jaguar-dark);
       transition: color var(--transition-200) $delay-02;
     }
