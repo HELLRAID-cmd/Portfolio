@@ -262,6 +262,12 @@
   &__drawer {
 
     .ant-drawer {
+
+      &-close,
+      &-title {
+        color: var(--c-white);
+      }
+      
       &-content {
         background-color: var(--c-jaguar-dark);
       }
