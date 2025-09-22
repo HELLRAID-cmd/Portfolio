@@ -84,6 +84,12 @@ html {
       }
 
       .hero__text {
+
+        &-title::before,
+        &-title::after {
+          transition: opacity var(--transition-200) $delay-02;
+        }
+        
         &-title::before {
           opacity: 0;
         }
