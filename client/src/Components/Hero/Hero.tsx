@@ -16,7 +16,7 @@ export const Hero = () => {
             <div className="hero__wrapper">
               <div className="hero__text">
                 <div className="hero__text-wrapper">
-                  <h1 className="hero__text-title" data-text="Hello! My name is Emil Gaynulin">Hello! My name is <br /> Emil Gaynulin</h1>
+                  <h1 className="hero__text-title" data-text="Hello! My name is Emil Gaynulin">Hello! My name is Emil Gaynulin</h1>
                   <h2 className="hero__text-desc" data-text="This is what I can do.">This is what I can do.</h2>
                 </div>
                 <Button className="hero__text-button button">Check!</Button>
