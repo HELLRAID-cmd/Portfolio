@@ -125,7 +125,7 @@ export const Header = () => {
                       <li className="header__drawer-item">
                         <a
                           className="header__drawer-link"
-                          href="mailto:emilgaynulinjob@gmail.com"
+                          href="mailto:emilgainulinjob@gmail.com"
                           target="_blank"
                         >
                           <svg
