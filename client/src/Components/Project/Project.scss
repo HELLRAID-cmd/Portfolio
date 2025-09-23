@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .project {
   margin: 0 0 110px 0;
@@ -7,6 +8,15 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media(max-width: 1000px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -19,6 +29,7 @@
     border-radius: var(--border-radius-20);
     background-color: var(--c-jaguar-dark);
     border: none;
+    overflow: hidden;
     position: relative;
     box-shadow: 0 0 10px -3px var(--c-white);
     color: var(--c-white);
@@ -34,13 +45,18 @@
     &-info {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      position: absolute;
       gap: 10px;
-      max-width: 350px;
       width: 100%;
-      padding: 0 0 0 60px;
-      opacity: 1;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      background-color: var(--c-jaguar-dark);
       transition: opacity var(--transition-200) $delay-02;
+      transform: translate(-50%, -50%);
+      z-index: 10;
 
       &-title {
         font-size: var(--f-size-h3);
@@ -61,10 +77,24 @@
     &-picture {
       max-width: 500px;
       width: 100%;
+
+      @media (max-width: 1000px) {
+        max-width: none;
+      }
+
       &-img {
         height: 100%;
         border-radius: var(--border-radius-20);
         transition: max-width var(--transition-200);
+
+        @media (max-width: 1000px) {
+          width: 100%;
+          height: 165px;
+        }
+
+        @include vp-767 {
+          height: 100%;
+        }
       }
     }
 
@@ -73,6 +103,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      height: 100%;
 
       &-title {
         font-size: var(--f-size-24);
@@ -96,12 +127,17 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      margin-top: auto;
 
       &-img {
         padding: 15px;
         position: relative;
         z-index: 5;
         cursor: pointer;
+
+        @include vp-767 {
+          padding: 10px;
+        }
 
         &::after {
           content: "";
@@ -125,26 +161,14 @@
         align-items: center;
         gap: 30px;
 
-        &:hover .project-clip {
-          clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        @media (max-width: 1000px) {
+          flex-direction: column;
+          height: 100%;
         }
 
-        &:hover .project-img {
-          left: 30px;
-          height: 194px;
-          transform: translate(0, -50%) scale(1);
-          transition: transform var(--transition-200),
-            left var(--transition-200), height var(--transition-200), width var(--transition-200);
-        }
-
-        &:hover .project__card-picture-img {
-          max-width: 350px;
-          transition: max-width var(--transition-200);
-        }
-
-        &:hover .project__card-info {
+        &:hover .project-hidden {
           opacity: 0;
-          transition: opacity var(--transition-200);
+          pointer-events: none;
         }
 
         &::before,
@@ -153,20 +177,5 @@
         }
       }
     }
-  }
-
-  &-clip {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    transition: clip-path var(--transition-200);
-  }
-
-  &-img {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    height: 100%;
-    transform: translate(-100%, -50%);
-    transition: transform var(--transition-200), left var(--transition-200),
-      height var(--transition-200);
   }
 }
