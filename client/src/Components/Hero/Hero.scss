@@ -6,6 +6,10 @@
 .hero-sect {
   min-height: 600px;
   margin: 0 0 110px 0;
+
+  @include vp-767 {
+    margin: 0 0 60px 0;
+  }
 }
 
 .hero {
@@ -118,6 +122,10 @@
       align-items: end;
       justify-content: center;
       height: 407px;
+
+      @media (max-width: 450px) {
+        height: unset;
+      }
     }
   }
 }
