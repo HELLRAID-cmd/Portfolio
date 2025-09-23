@@ -12,11 +12,11 @@ export const Project = () => {
               <h2 className="project__title">My Project</h2>
               <div className="project__cards">
                 <Card className="project__card">
-                  <div className="project__card-info">
+                  <div className="project__card-info project-hidden">
                     <h3 className="project__card-info-title">Briaton Final Work</h3>
                     <span className="project__card-info-date">22.05.2025</span>
                   </div>
-                  <picture className="project__card-picture project-img">
+                  <picture className="project__card-picture">
                     <source
                       media="(max-width: 1000px)"
                       src="/img/project/project.jpg"
@@ -29,7 +29,7 @@ export const Project = () => {
                       alt="img"
                     />
                   </picture>
-                  <div className="project__card-inner project-clip">
+                  <div className="project__card-inner">
                     <a
                       className="project__card-inner-title link-title"
                       href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
@@ -87,25 +87,24 @@ export const Project = () => {
                   </div>
                 </Card>
                 <Card className="project__card">
-                  <div className="project__card-info">
+                  <div className="project__card-info project-hidden">
                     <h3 className="project__card-info-title">Crypto Project</h3>
                     <span className="project__card-info-date">22.08.2025</span>
                   </div>
-                  <picture className="project__card-picture project-img">
+                  <picture className="project__card-picture">
                     <source
                       media="(max-width: 1000px)"
-                      srcSet="/img/project/cryptoProject@2x.jpg"
+                      srcSet="./public/img/project/cryptoProject@2x.jpg"
                       width={200}
                     />
                     <img
                       className="project__card-picture-img"
                       src="./public/img/project/cryptoProject.jpg"
-                      srcSet="./public/img/project/cryptoProject.jpg 2x"
                       width={500}
                       alt="img"
                     />
                   </picture>
-                  <div className="project__card-inner project-clip">
+                  <div className="project__card-inner">
                     <a
                       className="project__card-inner-title link-title"
                       href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
