@@ -84,12 +84,11 @@ html {
       }
 
       .hero__text {
-
         &-title::before,
         &-title::after {
           transition: opacity var(--transition-200) $delay-02;
         }
-        
+
         &-title::before {
           opacity: 0;
         }
@@ -134,10 +133,19 @@ html {
         transition: transform var(--transition-200),
           box-shadow var(--transition-200),
           background-color var(--transition-200) $delay-02;
+
+        &-info {
+          background-color: var(--c-white);
+          transition: background-color var(--transition-200) $delay-02,
+            opacity var(--transition-200) $delay-02;
+        }
       }
     }
 
-    a, p, span, h2 {
+    a,
+    p,
+    span,
+    h2 {
       color: var(--c-jaguar-dark);
       transition: color var(--transition-200) $delay-02;
     }
