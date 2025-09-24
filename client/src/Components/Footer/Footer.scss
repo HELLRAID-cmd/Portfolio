@@ -33,6 +33,9 @@
     &-link {
       color: var(--c-white);
       transition: color var(--transition-200);
+      width: 30px;
+      height: 30px;
+      display: block;
 
       &:hover {
         color: var(--c-purple);
