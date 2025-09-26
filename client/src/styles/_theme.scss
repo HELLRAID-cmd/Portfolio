@@ -89,7 +89,6 @@ html {
       }
 
       .hero__text {
-<<<<<<< HEAD
         &-title::before,
         &-title::after {
           transition: opacity var(--transition-200) $delay-02;
@@ -101,16 +100,6 @@ html {
 
         &-title::after {
           opacity: 1;
-=======
-        &-wrapper {
-          &-title::after {
-            opacity: 1;
-          }
-
-          &-desc {
-            color: var(--c-jaguar-dark);
-          }
->>>>>>> hero
         }
       }
     }
@@ -164,7 +153,6 @@ html {
         }
       }
     }
-<<<<<<< HEAD
 
     a,
     p,
@@ -176,8 +164,6 @@ html {
     h2 {
       color: var(--c-purple);
     }
-=======
->>>>>>> hero
   }
   &.dark {
     background-color: var(--c-jaguar-dark);
