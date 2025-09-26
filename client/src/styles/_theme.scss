@@ -15,6 +15,11 @@ html {
       }
     }
 
+    .link {
+      box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
+      color: var(--c-jaguar-dark);
+    }
+
     .header {
       background-color: var(--c-light-gray);
 
