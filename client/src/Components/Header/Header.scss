@@ -219,7 +219,7 @@
         border-color var(--transition-200);
 
       &.ant-btn.ant-btn-variant-outlined:hover,
-      &.ant-btn.ant-btn-variant-outlined:focus-visible, {
+      &.ant-btn.ant-btn-variant-outlined:focus-visible {
         background: unset;
         border-color: var(--c-purple);
       }
