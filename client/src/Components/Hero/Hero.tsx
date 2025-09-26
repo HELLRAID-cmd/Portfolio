@@ -1,4 +1,3 @@
-import { Button } from "antd";
 import { Routes, Route, Link } from "react-router-dom";
 import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
 import { HeroXO } from "./HeroGame/X-O/X-O";
@@ -19,7 +18,7 @@ export const Hero = () => {
                   <h1 className="hero__text-title" data-text="Hello! My name is Emil Gaynulin">Hello! My name is Emil Gaynulin</h1>
                   <h2 className="hero__text-desc" data-text="This is what I can do.">This is what I can do.</h2>
                 </div>
-                <Button className="hero__text-button button">Check!</Button>
+                <a className="hero__text-link link" href="#project">Check!</a>
               </div>
               <div className="hero__game">
                 <div className="hero__game-links">

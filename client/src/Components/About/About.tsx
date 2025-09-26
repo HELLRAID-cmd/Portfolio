@@ -28,7 +28,7 @@ export const About = () => {
         <div className="about">
           <div className="container">
             <div className="about__wrapper">
-              <h2 className="about__title">Professional skills</h2>
+              <h3 className="about__title">Professional skills</h3>
               <div className="about__card">
                 <Cards />
               </div>
