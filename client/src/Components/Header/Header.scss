@@ -25,10 +25,7 @@
     color: var(--c-white);
     transition: color var(--transition-200) $delay-02;
 
-    &:hover {
-      color: var(--c-purple);
-    }
-
+    &:hover,
     &:focus-visible {
       color: var(--c-purple);
     }
@@ -68,19 +65,12 @@
             border var(--transition-200);
         }
 
-        &:hover {
-          color: var(--c-purple);
-        }
-
-        &:hover::before {
-          border-color: var(--c-purple);
-          transform: translate(-50%, -50%) scale(1);
-        }
-
+        &:hover,
         &:focus-visible {
           color: var(--c-purple);
         }
 
+        &:hover::before,
         &:focus-visible::before {
           border-color: var(--c-purple);
           transform: translate(-50%, -50%) scale(1);
@@ -135,7 +125,8 @@
       transition: box-shadow var(--transition-200) $delay-02;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       border-color: var(--c-purple);
     }
 
@@ -227,7 +218,8 @@
       transition: background-color var(--transition-200),
         border-color var(--transition-200);
 
-      &.ant-btn.ant-btn-variant-outlined:hover {
+      &.ant-btn.ant-btn-variant-outlined:hover,
+      &.ant-btn.ant-btn-variant-outlined:focus-visible, {
         background: unset;
         border-color: var(--c-purple);
       }
@@ -267,6 +259,11 @@
       &-title {
         color: var(--c-white);
       }
+
+      &-close:hover,
+      &-close:focus-visible {
+        color: var(--c-purple);
+      }
       
       &-content {
         background-color: var(--c-jaguar-dark);
@@ -304,7 +301,8 @@
       color: var(--c-white);
       transition: color var(--transition-200);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--c-purple);
       }
     }
