@@ -30,6 +30,32 @@ html {
         }
       }
 
+      &__burger {
+
+        &-btn {
+          border-color: var(--c-purple);
+
+          &::before,
+          &::after {
+            background-color: var(--c-purple);
+          }
+        }
+      }
+
+      &__drawer {
+
+        .ant-drawer {
+
+          &-close span {
+            color: var(--c-white);
+          }
+
+          &-body a {
+            color: var(--c-white);
+          }
+        }
+      }
+
       &__menu-item-link {
         transition: color var(--transition-200) $delay-02;
 
