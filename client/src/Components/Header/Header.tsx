@@ -74,7 +74,7 @@ export const Header = () => {
                 onClick={showDrawer}
               ></Button>
               <Drawer
-                title="Menu"
+                title="Basic Drawer"
                 closable={{ "aria-label": "Close Button" }}
                 rootClassName="header__drawer"
                 onClose={onClose}
@@ -125,7 +125,7 @@ export const Header = () => {
                       <li className="header__drawer-item">
                         <a
                           className="header__drawer-link"
-                          href="mailto:emilgainulinjob@gmail.com"
+                          href="mailto:emilgaynulinjob@gmail.com"
                           target="_blank"
                         >
                           <svg
