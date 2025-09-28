@@ -1,0 +1,28 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loading 3s forwards;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--border-radius-16);
+  background-color: var(--c-purple);
+}
+
+@keyframes loading {
+  0%,
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.8);
+    border-radius: var(--border-radius-16);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
