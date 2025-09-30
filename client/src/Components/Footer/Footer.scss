@@ -1,0 +1,42 @@
+.footer {
+  box-shadow: 0 0 10px -1px var(--c-black);
+
+  &-border {
+    box-shadow: 0 0 10px -1px var(--c-white);
+    padding: 20px;
+    border-radius: 20px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__title {
+    font-size: var(--f-size-h4);
+    color: var(--c-purple);
+    margin: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  &__social {
+    &-list {
+      display: flex;
+      gap: 20px;
+    }
+
+    &-link {
+      color: var(--c-white);
+      transition: color var(--transition-200);
+
+      &:hover {
+        color: var(--c-purple);
+      }
+    }
+  }
+}

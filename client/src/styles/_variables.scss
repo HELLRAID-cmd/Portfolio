@@ -7,15 +7,13 @@
   --c-jaguar-dark: #2c2a41;
   --c-sun-yellow: #FFF200;
   --c-light-gray: #e6e6e6;
+  --c-red: #ff0000;
+  --c-gray: #c4c4c4;
   --c-purple: #9143a5;
 
   // Typography
   --ff-main: "PTSans", "Arial", sans-serif;
   --ff-secondary: "Arsenal", "Arial", sans-serif;
-
-  // Viewport
-  --vp-tablet: 1023px;
-  --vp-mobile: 767px;
 
   // Animation
   --transition-200: ease-in 0.2s;
@@ -39,8 +37,15 @@
   --f-size-24: 24px;
 
   --f-size-h1: 44px;
+  --f-size-h1-mobile: 42px;
+
   --f-size-h2: 40px;
+  --f-size-h2-mobile: 38px;
+
   --f-size-h3: 34px;
+  --f-size-h3-mobile: 32px;
+
+  --f-size-h4: 30px;
 
   // Line height
   --lh-44: 54px;
@@ -57,3 +62,7 @@
 
 // Dealy
 $delay-02: 0.2s;
+
+// Viewport
+$vp-tablet: 1023px;
+$vp-mobile: 767px;

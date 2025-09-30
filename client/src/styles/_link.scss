@@ -1,0 +1,44 @@
+@use "./variables" as *;
+
+a.link {
+  position: relative;
+  padding: var(--padding-5-10);
+  font-weight: var(--fw-medium);
+  border: 1px solid transparent;
+  color: var(--c-white);
+  background-color: transparent;
+  border-radius: var(--border-radius-16);
+  box-shadow: 2px 3px 4px -2px var(--c-white);
+  cursor: pointer;
+  transition: box-shadow var(--transition-200),
+    border-color var(--transition-200), color var(--transition-200);
+
+  &.sudoku,
+  &.x-o {
+    color: var(--c-purple);
+    box-shadow: -2px -3px 4px -2px var(--c-black);
+    border-color: var(--c-purple);
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--c-purple);
+    box-shadow: -2px -3px 4px -2px var(--c-black);
+    border-color: var(--c-purple);
+  }
+}
+
+.link-title {
+  font-weight: var(--fw-medium);
+  color: var(--c-white);
+  cursor: pointer;
+  transition: box-shadow var(--transition-200),
+    border-color var(--transition-200), color var(--transition-200);
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--c-purple);
+  }
+}
