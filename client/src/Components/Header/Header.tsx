@@ -141,7 +141,7 @@ export const Header = () => {
                       <li className="header__drawer-item">
                         <a
                           className="header__drawer-link"
-                          href="#"
+                          href="https://t.me/HELLRAID1"
                           target="_blank"
                         >
                           <svg
