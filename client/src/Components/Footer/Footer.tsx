@@ -27,7 +27,7 @@ export const Footer = () => {
               <li className="footer__social-item">
                 <a
                   className="footer__social-link"
-                  href="mailto:emilgaynulinjob@gmail.com"
+                  href="mailto:emilgainulinjob@gmail.com"
                   target="_blank"
                 >
                   <svg
@@ -41,7 +41,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="footer__social-item">
-                <a className="footer__social-link" href="#" target="_blank">
+                <a className="footer__social-link" href="https://t.me/HELLRAID1" target="_blank">
                   <svg
                     className="footer__social-icon"
                     width="30"
