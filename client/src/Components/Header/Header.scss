@@ -8,6 +8,7 @@
   background-color: var(--c-jaguar-dark);
   transition: background-color var(--transition-200) $delay-02;
   box-shadow: 0 0 10px -1px var(--c-black);
+  animation: headerTransform 1s forwards;
   z-index: 100;
 
   &__wrapper {
@@ -306,5 +307,13 @@
         color: var(--c-purple);
       }
     }
+  }
+}
+
+@keyframes headerTransform {
+  0% {
+    transform: translateY(-74px);
+  } 100% {
+    transform: translateY(0);
   }
 }
