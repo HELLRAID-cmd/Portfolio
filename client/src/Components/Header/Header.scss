@@ -4,7 +4,7 @@
 .header {
   position: fixed;
   width: 100%;
-  padding: var(--padding-15-0);
+  padding: 25px 0;
   background-color: var(--c-jaguar-dark);
   transition: background-color var(--transition-200) $delay-02;
   box-shadow: 0 0 10px -1px var(--c-black);
@@ -48,7 +48,7 @@
     &-item {
       &-link {
         position: relative;
-        font-size: var(--f-size-16);
+        font-size: var(--f-size-18);
         font-weight: var(--fw-bold);
         padding: var(--padding-5-10);
         color: var(--c-white);
@@ -307,7 +307,7 @@
 
 @keyframes headerTransform {
   0% {
-    transform: translateY(-74px);
+    transform: translateY(-100%);
   } 100% {
     transform: translateY(0);
   }
