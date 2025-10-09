@@ -1,6 +1,7 @@
 import { Card, Timeline } from "antd";
 import "./About.scss";
 import { skills } from "./About-skills";
+import { useEffect } from "react";
 
 export const About = () => {
   const Cards = () => {
@@ -21,6 +22,32 @@ export const About = () => {
       </>
     );
   };
+
+  useEffect(() => {
+    const scrollItems: NodeListOf<Element> =
+      document.querySelectorAll(".about__title");
+
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLElement;
+          if (entry.isIntersecting) {
+            target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: .9, // 90% элемента
+      }
+    );
+
+    scrollItems.forEach((item) => observer.observe(item));
+
+    return () => {
+      scrollItems.forEach((item) => observer.unobserve(item));
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
