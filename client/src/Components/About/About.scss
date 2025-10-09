@@ -1,5 +1,4 @@
 @use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
 
 .about-sect {
   margin: 0 0 110px 0;
@@ -10,6 +9,14 @@
     font-size: var(--f-size-h2);
     color: var(--c-purple);
     margin: 0 0 50px 0;
+    transform: translateY(-20px);
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__card {
@@ -17,18 +24,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-    @media(max-width: 900px) {
-      grid-template-columns: 1fr;
-    }
-
     &-timeline-desc {
-      display: inline-block;
       color: var(--c-white);
-      font-size: var(--f-size-16);
+      font-size: var(--f-size-20);
       position: relative;
       transition: color var(--transition-200);
       border-radius: 20px;
-      padding: 5px 10px;
 
       &:hover {
         color: var(--c-purple);
@@ -38,7 +39,7 @@
         content: "";
         position: absolute;
         top: 55%;
-        left: 50%;
+        left: 45%;
         width: 100%;
         height: 100%;
         border-radius: var(--border-radius-20);
@@ -79,11 +80,6 @@
       &-timeline {
         &-item {
           padding: 0 0 22px 0;
-
-          @include vp-767 {
-            padding: 0 0 15px 0;
-          }
-          
           &-last {
             padding: 0;
           }
