@@ -59,6 +59,10 @@
       transform: translate(-50%, -50%);
       z-index: 10;
 
+      @include vp-767 {
+        display: none;
+      }
+
       &-title {
         font-size: var(--f-size-h3);
         margin: 0;
@@ -121,10 +125,18 @@
 
       &-desc {
         font-size: var(--f-size-20);
+
+        @include vp-767 {
+          font-size: var(--f-size-16);
+        }
       }
 
       &-technologies {
         font-size: var(--f-size-16);
+
+        @include vp-767 {
+          font-size: var(--f-size-14);
+        }
       }
     }
 
