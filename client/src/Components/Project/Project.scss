@@ -120,6 +120,10 @@
       gap: 5px;
 
       &-desc {
+        font-size: var(--f-size-20);
+      }
+
+      &-technologies {
         font-size: var(--f-size-16);
       }
     }
@@ -159,12 +163,14 @@
 
     .ant-card {
       &-body {
-        display: flex;
+        display: grid;
+        grid-template-columns: minmax(300px, 452px) 1fr;
         align-items: center;
+        padding: 30px;
         gap: 30px;
 
         @media (max-width: 1000px) {
-          flex-direction: column;
+          grid-template-columns: 1fr;
           height: 100%;
         }
 
