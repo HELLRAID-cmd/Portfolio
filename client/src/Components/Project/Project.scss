@@ -9,7 +9,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @media(max-width: 1000px) {
+    @media (max-width: 1000px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -54,7 +54,8 @@
       top: 50%;
       left: 50%;
       background-color: var(--c-jaguar-dark);
-      transition: opacity var(--transition-200) $delay-02;
+      transition: opacity var(--transition-200) $delay-02,
+        background-color var(--transition-200) $delay-02;
       transform: translate(-50%, -50%);
       z-index: 10;
 
@@ -70,6 +71,7 @@
         border: 1px solid var(--c-purple);
         padding: 5px 10px;
         border-radius: var(--border-radius-20);
+        transition: color var(--transition-200) $delay-02;
       }
     }
 
