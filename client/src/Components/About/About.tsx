@@ -1,28 +1,8 @@
-import { Card, Timeline } from "antd";
+import { Cards } from "./About-Card";
 import "./About.scss";
-import { skills } from "./About-skills";
 import { useEffect } from "react";
 
 export const About = () => {
-  const Cards = () => {
-    return (
-      <>
-        {skills.map((group, i) => (
-          <Card key={i}>
-            <Timeline
-              items={group.map((item) => ({
-                key: item.id,
-                children: (
-                  <p className="about__card-timeline-desc">{item.desc}</p>
-                ),
-              }))}
-            ></Timeline>
-          </Card>
-        ))}
-      </>
-    );
-  };
-
   useEffect(() => {
     const scrollItems: NodeListOf<Element> =
       document.querySelectorAll(".about__title");
