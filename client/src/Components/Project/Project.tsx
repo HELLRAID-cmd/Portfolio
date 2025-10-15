@@ -1,8 +1,11 @@
 import { Card } from "antd";
 import "./Project.scss";
 import "../../styles/_link.scss";
+import { useAnimated } from "../UseHook/useAnimaned";
 
 export const Project = () => {
+  useAnimated(".project__card");
+  
   return (
     <>
       <section className="project-sect" id="project">
