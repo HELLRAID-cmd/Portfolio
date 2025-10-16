@@ -72,6 +72,10 @@
 
       @include vp-767 {
         display: none;
+
+        &--disable {
+          display: flex;
+        }
       }
 
       &-title {
