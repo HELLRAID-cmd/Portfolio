@@ -5,7 +5,7 @@ import { useAnimated } from "../UseHook/useAnimaned";
 
 export const Project = () => {
   useAnimated(".project__card");
-  
+
   return (
     <>
       <section className="project-sect" id="project">
@@ -16,7 +16,9 @@ export const Project = () => {
               <div className="project__cards">
                 <Card className="project__card">
                   <div className="project__card-info project-hidden">
-                    <h3 className="project__card-info-title">Briaton Final Work</h3>
+                    <h3 className="project__card-info-title">
+                      Briaton Final Work
+                    </h3>
                     <span className="project__card-info-date">22.05.2025</span>
                   </div>
                   <picture className="project__card-picture">
@@ -158,6 +160,81 @@ export const Project = () => {
                       <div className="project__card-technologies-img">
                         <img
                           src="./public/img/project/icons/AntD.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="project__card project__card--disabled">
+                  <div className="project__card-info project-hidden">
+                    <h3 className="project__card-info-title">In development</h3>
+                    <span className="project__card-info-date">??.??.????</span>
+                  </div>
+                  <picture className="project__card-picture">
+                    <source
+                      media="(max-width: 1000px)"
+                      src="/img/project/project.jpg"
+                      width={200}
+                    />
+                    <img
+                      className="project__card-picture-img"
+                      src="./public/img/project/project.jpg"
+                      width={500}
+                      alt="img"
+                    />
+                  </picture>
+                  <div className="project__card-inner">
+                    <a
+                      className="project__card-inner-title link-title"
+                      href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
+                      target="_blank"
+                    >
+                      Briaton Final Work
+                    </a>
+                    <div className="project__card-text">
+                      <p className="project__card-text-desc">
+                        The final assignment for the Skillbox courses includes
+                        an&nbsp;online store of&nbsp;various types
+                        of&nbsp;chandeliers. Rewritten in&nbsp;TS + React.
+                      </p>
+                      <p className="project__card-text-technologies">
+                        Technologies: React, TS, Scss, Vite, Just Validate.
+                      </p>
+                    </div>
+                    <div className="project__card-technologies">
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/React.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/TypeScript.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Sass.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/Vite.js.png"
+                          width={35}
+                          alt="img"
+                        />
+                      </div>
+                      <div className="project__card-technologies-img">
+                        <img
+                          src="./public/img/project/icons/JustValidate.png"
                           width={35}
                           alt="img"
                         />
