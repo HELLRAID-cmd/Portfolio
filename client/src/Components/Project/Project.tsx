@@ -168,7 +168,7 @@ export const Project = () => {
                   </div>
                 </Card>
                 <Card className="project__card project__card--disabled">
-                  <div className="project__card-info project-hidden">
+                  <div className="project__card-info project__card-info--disable project-hidden">
                     <h3 className="project__card-info-title">In development</h3>
                     <span className="project__card-info-date">??.??.????</span>
                   </div>
