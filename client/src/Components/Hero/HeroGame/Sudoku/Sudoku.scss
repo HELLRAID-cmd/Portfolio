@@ -10,6 +10,11 @@
   &__board {
     opacity: 0;
     animation: board .5s linear 2.7s forwards;
+
+    &.loaded {
+      opacity: 1;
+      animation: none;
+    }
   }
 
   &__loading {
