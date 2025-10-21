@@ -28,7 +28,9 @@ export const Header = () => {
               height="44"
               aria-hidden="true"
             >
-              <use href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-user`}></use>
+              <use
+                href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-user`}
+              ></use>
             </svg>
           </a>
           <ul className="header__menu">
@@ -118,10 +120,15 @@ export const Header = () => {
                             height="30"
                             aria-hidden="true"
                           >
-                            <use href="/public/svg/sprite.svg#icon-github"></use>
+                            <use
+                              href={`${
+                                import.meta.env.BASE_URL
+                              }svg/sprite.svg#icon-github`}
+                            ></use>
                           </svg>
                         </a>
                       </li>
+
                       <li className="header__drawer-item">
                         <a
                           className="header__drawer-link"
@@ -134,10 +141,15 @@ export const Header = () => {
                             height="30"
                             aria-hidden="true"
                           >
-                            <use href="/public/svg/sprite.svg#icon-mail"></use>
+                            <use
+                              href={`${
+                                import.meta.env.BASE_URL
+                              }svg/sprite.svg#icon-mail`}
+                            ></use>
                           </svg>
                         </a>
                       </li>
+
                       <li className="header__drawer-item">
                         <a
                           className="header__drawer-link"
@@ -150,7 +162,11 @@ export const Header = () => {
                             height="30"
                             aria-hidden="true"
                           >
-                            <use href="/public/svg/sprite.svg#icon-telegram"></use>
+                            <use
+                              href={`${
+                                import.meta.env.BASE_URL
+                              }svg/sprite.svg#icon-telegram`}
+                            ></use>
                           </svg>
                         </a>
                       </li>
