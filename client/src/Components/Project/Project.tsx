@@ -24,12 +24,14 @@ export const Project = () => {
                   <picture className="project__card-picture">
                     <source
                       media="(max-width: 1000px)"
-                      src="/img/project/project.jpg"
+                      srcSet={`${
+                        import.meta.env.BASE_URL
+                      }img/project/project.jpg`}
                       width={200}
                     />
                     <img
                       className="project__card-picture-img"
-                      src="./public/img/project/project.jpg"
+                      src={`${import.meta.env.BASE_URL}img/project/project.jpg`}
                       width={500}
                       alt="img"
                     />
@@ -55,37 +57,47 @@ export const Project = () => {
                     <div className="project__card-technologies">
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/React.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/React.png`}
                           width={35}
-                          alt="img"
+                          alt="React"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/TypeScript.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/TypeScript.png`}
                           width={35}
-                          alt="img"
+                          alt="TypeScript"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/Sass.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/Sass.png`}
                           width={35}
-                          alt="img"
+                          alt="Sass"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/Vite.js.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/Vite.js.png`}
                           width={35}
-                          alt="img"
+                          alt="Vite"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/JustValidate.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/JustValidate.png`}
                           width={35}
-                          alt="img"
+                          alt="JustValidate"
                         />
                       </div>
                     </div>
@@ -131,35 +143,45 @@ export const Project = () => {
                     <div className="project__card-technologies">
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/React.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/React.png`}
                           width={35}
-                          alt="img"
+                          alt="React"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/TypeScript.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/TypeScript.png`}
                           width={35}
-                          alt="img"
+                          alt="TypeScript"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/Sass.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/Sass.png`}
                           width={35}
-                          alt="img"
+                          alt="Sass"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/Vite.js.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/Vite.js.png`}
                           width={35}
-                          alt="img"
+                          alt="Vite"
                         />
                       </div>
                       <div className="project__card-technologies-img">
                         <img
-                          src="./public/img/project/icons/AntD.png"
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }img/project/icons/AntD.png`}
                           width={35}
                           alt="img"
                         />
@@ -202,43 +224,6 @@ export const Project = () => {
                       <p className="project__card-text-technologies">
                         Technologies: React, TS, Scss, Vite, Just Validate.
                       </p>
-                    </div>
-                    <div className="project__card-technologies">
-                      <div className="project__card-technologies-img">
-                        <img
-                          src="./public/img/project/icons/React.png"
-                          width={35}
-                          alt="img"
-                        />
-                      </div>
-                      <div className="project__card-technologies-img">
-                        <img
-                          src="./public/img/project/icons/TypeScript.png"
-                          width={35}
-                          alt="img"
-                        />
-                      </div>
-                      <div className="project__card-technologies-img">
-                        <img
-                          src="./public/img/project/icons/Sass.png"
-                          width={35}
-                          alt="img"
-                        />
-                      </div>
-                      <div className="project__card-technologies-img">
-                        <img
-                          src="./public/img/project/icons/Vite.js.png"
-                          width={35}
-                          alt="img"
-                        />
-                      </div>
-                      <div className="project__card-technologies-img">
-                        <img
-                          src="./public/img/project/icons/JustValidate.png"
-                          width={35}
-                          alt="img"
-                        />
-                      </div>
                     </div>
                   </div>
                 </Card>

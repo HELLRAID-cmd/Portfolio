@@ -28,7 +28,7 @@ export const Header = () => {
               height="44"
               aria-hidden="true"
             >
-              <use href="/public/svg/sprite.svg#icon-user"></use>
+              <use href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-user`}></use>
             </svg>
           </a>
           <ul className="header__menu">
