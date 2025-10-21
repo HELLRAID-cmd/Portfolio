@@ -28,7 +28,7 @@ const calculateWinner = (squares: (string | null)[]) => {
 
 export const HeroXO = () => {
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [lang, setLang] = useState("en");
   const [squares, setSquares] = useState<(string | null)[]>(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
