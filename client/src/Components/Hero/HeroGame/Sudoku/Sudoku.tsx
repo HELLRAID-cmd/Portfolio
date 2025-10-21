@@ -10,6 +10,7 @@ export const Sudoku = () => {
   const [isCellCorrect, setIsCellCorrect] = useState<boolean[][]>([]);
   const [loading, setLoading] = useState(true);
   const [lang, setLang] = useState("en");
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const showModal = () => {
     setOpen(true);
@@ -27,7 +28,9 @@ export const Sudoku = () => {
       setBoard(data.newboard.grids[0].value);
       setBoardCheck(data.newboard.grids[0].solution);
       setIsCellCorrect(
-        data.newboard.grids[0].value.map((row: number[]) => row.map((cell: number) => cell !== 0))
+        data.newboard.grids[0].value.map((row: number[]) =>
+          row.map((cell: number) => cell !== 0)
+        )
       );
     } catch (err) {
       console.error(err);
@@ -35,6 +38,13 @@ export const Sudoku = () => {
       setLoading(false);
     }
   };
+
+  // Проверка на загрузку судоку
+  useEffect(() => {
+    if (!hasLoaded) {
+      setHasLoaded(true);
+    }
+  }, [hasLoaded]);
 
   useEffect(() => {
     fetchBoard();
@@ -64,7 +74,7 @@ export const Sudoku = () => {
 
   const handleLanguage = () => {
     setLang((prev) => (prev === "ru" ? "en" : "ru"));
-  }
+  };
 
   return (
     <>
@@ -75,7 +85,7 @@ export const Sudoku = () => {
         />
       ) : (
         <div className="sudoku-game">
-          <div className="sudoku-game__board">
+          <div className={`sudoku-game__board ${hasLoaded ? "loaded" : ""}`}>
             {board.map((row, rowIndex) => (
               <div className="sudoku-game__row" key={rowIndex}>
                 {row.map((cell, coIndex) => {
@@ -110,20 +120,26 @@ export const Sudoku = () => {
         </div>
       )}
       <Modal
-        title={lang === "en" ? "Rules of the game Sudoku" : "Правила для игры в Судоку"}
+        title={
+          lang === "en"
+            ? "Rules of the game Sudoku"
+            : "Правила для игры в Судоку"
+        }
         className="sudoku-game__modal"
         open={open}
         closable={{ "aria-label": "Custom Close Button" }}
         footer={[
           <Button onClick={handleLanguage} aria-label="Перевести">
             {lang === "en" ? "En" : "Ru"}
-          </Button>
+          </Button>,
         ]}
         onCancel={handleCancel}
         centered
       >
         <p>
-          {lang === "en" ? "Sudoku is a 9x9 puzzle where you have to fill in the empty cells with numbers from 1 to 9 so that no numbers are repeated in a row, column, or in each small 3x3 square." : "Судоку — это головоломка размером 9x9, в которой вам нужно заполнить пустые клетки цифрами от 1 до 9 так, чтобы в строке, столбце или в каждом маленьком квадрате 3x3 цифры не повторялись."}
+          {lang === "en"
+            ? "Sudoku is a 9x9 puzzle where you have to fill in the empty cells with numbers from 1 to 9 so that no numbers are repeated in a row, column, or in each small 3x3 square."
+            : "Судоку — это головоломка размером 9x9, в которой вам нужно заполнить пустые клетки цифрами от 1 до 9 так, чтобы в строке, столбце или в каждом маленьком квадрате 3x3 цифры не повторялись."}
         </p>
       </Modal>
     </>
