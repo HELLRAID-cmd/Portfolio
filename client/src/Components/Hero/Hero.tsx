@@ -1,11 +1,6 @@
-import { Routes, Route, Link } from "react-router-dom";
-import { Sudoku } from "./HeroGame/Sudoku/Sudoku";
-import { HeroXO } from "./HeroGame/X-O/X-O";
 import "./Hero.scss";
-import { useState } from "react";
 
 export const Hero = () => {
-  const [active, setActive] = useState("");
   
   return (
     <>
@@ -19,19 +14,6 @@ export const Hero = () => {
                   <h2 className="hero__text-desc">This is what I can do.</h2>
                 </div>
                 <a className="hero__text-link link" href="#project">Check!</a>
-              </div>
-              <div className="hero__game">
-                <div className="hero__game-links">
-                  <Link to="/" onClick={() => setActive("sudoku")} className={`hero__game-link link ${active === "sudoku" ? "sudoku" : ""}`}>Sudoku</Link>
-                  <Link to="/HeroXO" onClick={() => setActive("x-o")} className={`hero__game-link link ${active === "x-o" ? "x-o" : ""}`}>X-O</Link>
-                </div>
-
-                <div className="hero__game-inner">
-                  <Routes>
-                    <Route path="/" element={<Sudoku />} />
-                    <Route path="/HeroXO" element={<HeroXO />} />
-                  </Routes>
-                </div>
               </div>
             </div>
           </div>

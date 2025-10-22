@@ -5,7 +5,9 @@ export const Footer = () => {
     <footer className="footer" id="contacts">
       <div className="container">
         <div className="footer__wrapper">
-          <h4 className="footer__title">Interested in my skills? Let’s get in touch!</h4>
+          <h4 className="footer__title">
+            Interested in my skills? Let’s get in touch!
+          </h4>
           <div className="footer__social">
             <ul className="footer__social-list">
               <li className="footer__social-item">
@@ -20,7 +22,11 @@ export const Footer = () => {
                     height="30"
                     aria-hidden="true"
                   >
-                    <use href="/public/svg/sprite.svg#icon-github"></use>
+                    <use
+                      href={`${
+                        import.meta.env.BASE_URL
+                      }svg/sprite.svg#icon-github`}
+                    ></use>
                   </svg>
                 </a>
               </li>
@@ -36,19 +42,31 @@ export const Footer = () => {
                     height="30"
                     aria-hidden="true"
                   >
-                    <use href="/public/svg/sprite.svg#icon-mail"></use>
+                    <use
+                      href={`${
+                        import.meta.env.BASE_URL
+                      }svg/sprite.svg#icon-mail`}
+                    ></use>
                   </svg>
                 </a>
               </li>
               <li className="footer__social-item">
-                <a className="footer__social-link" href="https://t.me/HELLRAID1" target="_blank">
+                <a
+                  className="footer__social-link"
+                  href="https://t.me/HELLRAID1"
+                  target="_blank"
+                >
                   <svg
                     className="footer__social-icon"
                     width="30"
                     height="30"
                     aria-hidden="true"
                   >
-                    <use href="/public/svg/sprite.svg#icon-telegram"></use>
+                    <use
+                      href={`${
+                        import.meta.env.BASE_URL
+                      }svg/sprite.svg#icon-telegram`}
+                    ></use>
                   </svg>
                 </a>
               </li>
