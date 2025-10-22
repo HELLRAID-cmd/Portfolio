@@ -1,0 +1,22 @@
+.hero__animation-1440 {
+  position: relative;
+
+  .hero__animation-icon {
+    // opacity: 1;
+    // animation: mouse 1s forwards 0.5s;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
