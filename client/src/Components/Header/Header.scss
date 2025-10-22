@@ -271,6 +271,11 @@
         align-items: center;
         justify-content: space-between;
       }
+
+      &-title,
+      &-close {
+        color: var(--c-white);
+      }
     }
 
     &-info {
