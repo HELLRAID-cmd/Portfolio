@@ -13,6 +13,9 @@ export const Animation1440 = () => {
           href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-cursor`}
         ></use>
       </svg>
+      <div className="hero__animation-box">
+        
+      </div>
     </div>
   );
 };
