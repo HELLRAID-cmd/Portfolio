@@ -1,4 +1,4 @@
-.hero__animation-icon {
+.hero__animation-cursor {
   opacity: 0;
   animation: mouseMove 15s linear forwards 0.5s;
   position: absolute;
@@ -9,19 +9,84 @@
   transform: scale(0.6);
 }
 
-.hero__animation-box {
+.animation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
   border: 2px solid transparent;
   border-radius: 20px;
+  padding: 10px;
   animation: boxExpand 15s linear forwards 0.3s;
   transform-origin: top left;
+
+  // title
+  &-title {
+    font-size: var(--f-size-24);
+    color: var(--c-white);
+    text-align: center;
+
+    span {
+      display: inline-block;
+      opacity: 0;
+    }
+
+    &--visible span {
+    animation: showLetter 0.3s forwards;
+  }
+
+    @for $i from 1 through 20 {
+      span:nth-child(#{$i}) {
+        animation-delay: $i * 0.10s;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-item {
+    border: 1px solid var(--c-white);
+    border-radius: 10px;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--c-white);
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  &-span {
+    margin: 0 auto 0 0;
+  }
+
+  // logo
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &__img {
+      border-radius: 50%;
+      height: 40px;
+    }
+
+    &__name {
+      color: var(--c-white);
+      font-size: var(--f-size-20);
+    }
+  }
 }
 
 @keyframes mouseMove {
+  // Начало движения
   0% {
     opacity: 0;
     transform: translate(0, 0) scale(1);
@@ -33,9 +98,11 @@
   8% {
     transform: translate(-275px, -175px) scale(1);
   }
+  // Нажатие на кнопку
   11.9% {
     transform: translate(-495px, -360px) scale(1);
   }
+  // Передаскивание с нажатой кнопкой
   12% {
     transform: translate(-495px, -360px) scale(0.6);
   }
@@ -51,9 +118,26 @@
   20.5% {
     transform: translate(-100px, -80px) scale(1);
   }
+  // Перемещение к тексту
+  23% {
+    transform: translate(-200px, -175px) scale(1);
+  }
+  25% {
+    transform: translate(-300px, -340px) scale(1);
+  }
+  // Нажатие на поле
+  25.5% {
+    transform: translate(-300px, -340px) scale(0.6);
+  }
+  28% {
+    transform: translate(-300px, -340px) scale(1);
+  }
+  30% {
+    transform: translate(-320px, -320px) scale(1);
+  }
   100% {
     opacity: 1;
-    transform: translate(-495px, -360px) scale(1);
+    transform: translate(-320px, -320px) scale(1);
   }
 }
 
@@ -89,11 +173,17 @@
   }
   22% {
     width: 535px;
-    height: 400px;
+    height: 300px;
   }
   100% {
     width: 535px;
-    height: 400px;
+    height: 300px;
     border-color: var(--c-white);
+  }
+}
+
+@keyframes showLetter {
+  to {
+    opacity: 1;
   }
 }
