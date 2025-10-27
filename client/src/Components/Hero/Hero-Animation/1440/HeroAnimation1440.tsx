@@ -1,14 +1,36 @@
 import { useState, useEffect } from "react";
 import "./HeroAnimation1440.scss";
+import { HeroGithub } from "../Hero-item/Hero-github";
 
 export const Animation1440 = () => {
   const [showTitle, setShowTitle] = useState(false);
+  const [showLinks, setShowLinks] = useState(false);
   const title = "My Social Links";
+  const links = [
+    "github.com/HELLRAID-cmd",
+    '<a href="emilgainulinjob@gmail.com">Mail</a>',
+    '<a href="t.me/HELLRAID1">Telegram</a>',
+  ];
 
+  // Задержка анимации
   useEffect(() => {
     const timer = setTimeout(() => setShowTitle(true), 5000);
-    return () => clearTimeout(timer);
+    const linksTimer = setTimeout(() => setShowLinks(true), 8000);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(linksTimer);
+    };
   }, []);
+
+  // Удаление links
+  useEffect(() => {
+    if (showLinks) {
+      const linksTimer = setTimeout(() => setShowLinks(false), 2800);
+      return () => {
+        clearTimeout(linksTimer);
+      };
+    }
+  }, [showLinks]);
 
   return (
     <div className="animation-1440">
@@ -23,41 +45,18 @@ export const Animation1440 = () => {
         ></use>
       </svg>
       <div className="animation">
-        <p className={`animation-title ${showTitle ? "animation-title--visible" : ""}`}>
+        <p
+          className={`animation-title ${
+            showTitle ? "animation-title--visible" : ""
+          }`}
+        >
           {title.split("").map((letter, index) => (
-          <span key={index}>{letter === " " ? "\u00A0" : letter}</span>
-        ))}
+            <span key={index}>{letter === " " ? "\u00A0" : letter}</span>
+          ))}
         </p>
         <ul className="animation-list">
-          <li className="animation-item">
-            <a
-              href="https://github.com/HELLRAID-cmd/EmilGainulin"
-              target="_blank"
-              className="animation-link"
-            >
-              <svg
-                className="animation-link__icon"
-                width="30"
-                height="30"
-                aria-hidden="true"
-              >
-                <use
-                  href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-github`}
-                ></use>
-              </svg>
-              <span className="animation-span">GitHub</span>
-              <span className="animation-logo">
-                <img
-                  src={`${import.meta.env.BASE_URL}img/hero/hero-cat.jpg`}
-                  alt="github logo"
-                  width={40}
-                  className="animation-logo__img"
-                />
-                <span className="animation-logo__name">HELLRAID-cmd</span>
-              </span>
-            </a>
-          </li>
-          <li className="animation-item">
+          <HeroGithub showLinks={showLinks} links={links}/>
+          <li className="animation-item animation-item--second">
             <a
               href="mailto:emilgainulinjob@gmail.com"
               target="_blank"
@@ -85,7 +84,7 @@ export const Animation1440 = () => {
               </span>
             </a>
           </li>
-          <li className="animation-item">
+          <li className="animation-item animation-item--third">
             <a
               href="https://t.me/HELLRAID1"
               target="_blank"
