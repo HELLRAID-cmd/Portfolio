@@ -7,6 +7,7 @@
   bottom: 0;
   right: 0;
   transform: scale(0.6);
+  z-index: 10;
 }
 
 .animation {
@@ -48,19 +49,13 @@
     gap: 10px;
   }
 
-  &-item {
-    &--second,
-    &--third {
-      display: none;
-    }
-  }
-
   &-code {
     margin: 20px 0 0 20px;
     color: var(--c-white);
 
     span {
       display: inline-block;
+      font-size: 20px;
       opacity: 0;
     }
 
@@ -68,7 +63,11 @@
       animation: showLetter 0.1s forwards;
     }
 
-    @for $i from 1 through 30 {
+    &--disable {
+      display: none;
+    }
+
+    @for $i from 1 through 40 {
       span:nth-child(#{$i}) {
         animation-delay: $i * 0.1s;
       }
@@ -76,7 +75,7 @@
   }
 
   &-link {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
@@ -86,9 +85,9 @@
     border: 1px solid var(--c-white);
     border-radius: 10px;
 
-    // &--first {
-    //   display: none;
-    // }
+    &--active {
+      display: flex;
+    }
   }
 
   &-span {

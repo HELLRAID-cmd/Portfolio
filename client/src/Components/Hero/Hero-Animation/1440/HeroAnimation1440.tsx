@@ -1,36 +1,52 @@
 import { useState, useEffect } from "react";
 import "./HeroAnimation1440.scss";
 import { HeroGithub } from "../Hero-item/Hero-github";
+import { HeroMail } from "../Hero-item/Hero-mail";
+import { HeroTelegram } from "../Hero-item/Hero-telegram";
 
 export const Animation1440 = () => {
   const [showTitle, setShowTitle] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
-  const title = "My Social Links";
+  const [visibleLinks, setVisibleLinks] = useState([false, false, false]);
+  
+  const title = "My social links";
   const links = [
     "github.com/HELLRAID-cmd",
-    '<a href="emilgainulinjob@gmail.com">Mail</a>',
-    '<a href="t.me/HELLRAID1">Telegram</a>',
+    "emilgainulinjob@gmail.com",
+    "t.me/HELLRAID1"
   ];
 
   // Задержка анимации
   useEffect(() => {
+    const innerTimers: number[] = [];
+
     const timer = setTimeout(() => setShowTitle(true), 5000);
     const linksTimer = setTimeout(() => setShowLinks(true), 8000);
+    // Появление списка с задержкой
+    const linksVisible = setTimeout(() => {
+      setVisibleLinks([true, false, false]); // Github
+
+      innerTimers.push(
+        setTimeout(() => {
+          setVisibleLinks([true, true, false]); // Mail
+        }, 3000)
+      );
+
+      innerTimers.push(
+        setTimeout(() => {
+          setVisibleLinks([true, true, true]); // Telegram
+        }, 5000)
+      );
+
+    }, 10900);
+    
     return () => {
       clearTimeout(timer);
       clearTimeout(linksTimer);
+      clearTimeout(linksVisible);
+      innerTimers.forEach(clearTimeout);
     };
   }, []);
-
-  // Удаление links
-  useEffect(() => {
-    if (showLinks) {
-      const linksTimer = setTimeout(() => setShowLinks(false), 2800);
-      return () => {
-        clearTimeout(linksTimer);
-      };
-    }
-  }, [showLinks]);
 
   return (
     <div className="animation-1440">
@@ -55,65 +71,9 @@ export const Animation1440 = () => {
           ))}
         </p>
         <ul className="animation-list">
-          <HeroGithub showLinks={showLinks} links={links}/>
-          <li className="animation-item animation-item--second">
-            <a
-              href="mailto:emilgainulinjob@gmail.com"
-              target="_blank"
-              className="animation-link"
-            >
-              <svg
-                className="animation-icon"
-                width="30"
-                height="30"
-                aria-hidden="true"
-              >
-                <use
-                  href={`${import.meta.env.BASE_URL}svg/sprite.svg#icon-mail`}
-                ></use>
-              </svg>
-              <span className="animation-span">Mail</span>
-              <span className="animation-logo">
-                <img
-                  src={`${import.meta.env.BASE_URL}img/hero/hero-cat.jpg`}
-                  alt="github logo"
-                  width={40}
-                  className="animation-logo__img"
-                />
-                <span className="animation-logo__name">Emil Gainulin</span>
-              </span>
-            </a>
-          </li>
-          <li className="animation-item animation-item--third">
-            <a
-              href="https://t.me/HELLRAID1"
-              target="_blank"
-              className="animation-link"
-            >
-              <svg
-                className="animation-icon"
-                width="30"
-                height="30"
-                aria-hidden="true"
-              >
-                <use
-                  href={`${
-                    import.meta.env.BASE_URL
-                  }svg/sprite.svg#icon-telegram`}
-                ></use>
-              </svg>
-              <span className="animation-span">Telegram</span>
-              <span className="animation-logo">
-                <img
-                  src={`${import.meta.env.BASE_URL}img/hero/hero-telegram.jpg`}
-                  alt="github logo"
-                  width={40}
-                  className="animation-logo__img"
-                />
-                <span className="animation-logo__name">HELLRAID</span>
-              </span>
-            </a>
-          </li>
+          <HeroGithub showLinks={showLinks} links={links[0]} visible={visibleLinks[0]}/>
+          <HeroMail showLinks={showLinks} links={links[1]} visible={visibleLinks[1]}/>
+          <HeroTelegram showLinks={showLinks} links={links[2]} visible={visibleLinks[2]}/>
         </ul>
       </div>
     </div>

@@ -1,24 +1,14 @@
-type HeroGithubProps = {
-  showLinks: boolean;
-  links: string[];
-}
+import { HeroPreCode } from "./Hero-pre-code";
+import type { HeroProps } from "./Hero-types";
 
-export const HeroGithub = ({showLinks, links}: HeroGithubProps) => {
+export const HeroGithub = ({ showLinks, links, visible }: HeroProps) => {
   return (
-    <li className="animation-item">
-      <pre
-        className={`animation-code ${
-          showLinks ? "animation-code--visible" : ""
-        }`}
-      >
-        {links[0].split("").map((letter, index) => (
-          <span key={index}>{letter === " " ? "\u00A0" : letter}</span>
-        ))}
-      </pre>
+    <li className="animation-item animation-item--active">
+      <HeroPreCode showLinks={showLinks} links={links} delay={0} />
       <a
         href="https://github.com/HELLRAID-cmd/EmilGainulin"
         target="_blank"
-        className={`animation-link ${showLinks ? "" : "animation-link--first"}`}
+        className={`animation-link ${visible ? "animation-link--active" : ""}`}
       >
         <svg
           className="animation-link__icon"
