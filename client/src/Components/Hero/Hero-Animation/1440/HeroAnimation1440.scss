@@ -32,12 +32,12 @@
     }
 
     &--visible span {
-    animation: showLetter 0.3s forwards;
-  }
+      animation: showLetter 0.1s forwards;
+    }
 
     @for $i from 1 through 20 {
       span:nth-child(#{$i}) {
-        animation-delay: $i * 0.10s;
+        animation-delay: $i * 0.1s;
       }
     }
   }
@@ -49,8 +49,30 @@
   }
 
   &-item {
-    border: 1px solid var(--c-white);
-    border-radius: 10px;
+    &--second,
+    &--third {
+      display: none;
+    }
+  }
+
+  &-code {
+    margin: 20px 0 0 20px;
+    color: var(--c-white);
+
+    span {
+      display: inline-block;
+      opacity: 0;
+    }
+
+    &--visible span {
+      animation: showLetter 0.1s forwards;
+    }
+
+    @for $i from 1 through 30 {
+      span:nth-child(#{$i}) {
+        animation-delay: $i * 0.1s;
+      }
+    }
   }
 
   &-link {
@@ -61,6 +83,12 @@
     color: var(--c-white);
     font-size: 22px;
     padding: 15px;
+    border: 1px solid var(--c-white);
+    border-radius: 10px;
+
+    // &--first {
+    //   display: none;
+    // }
   }
 
   &-span {
@@ -132,12 +160,26 @@
   28% {
     transform: translate(-300px, -340px) scale(1);
   }
+  // Задержка курсора
   30% {
     transform: translate(-320px, -320px) scale(1);
   }
+  42.5% {
+    transform: translate(-320px, -320px) scale(1);
+  }
+  43% {
+    transform: translate(-320px, -320px) scale(1);
+  }
+  // Начало движения к списку
+  45% {
+    transform: translate(-380px, -290px) scale(1);
+  }
+  48% {
+    transform: translate(-460px, -270px) scale(1);
+  }
   100% {
     opacity: 1;
-    transform: translate(-320px, -320px) scale(1);
+    transform: translate(-460px, -270px) scale(1);
   }
 }
 
