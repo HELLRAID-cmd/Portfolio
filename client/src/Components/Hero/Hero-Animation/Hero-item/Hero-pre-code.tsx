@@ -13,7 +13,7 @@ export const HeroPreCode = ({showLinks, links, delay = 0}: HeroProps) => {
 
     useEffect(() => {
     if (visible) {
-      const hideTimer = setTimeout(() => setVisible(false), links.length * 115);
+      const hideTimer = setTimeout(() => setVisible(false), links.length * 108);
       return () => clearTimeout(hideTimer);
     }
   }, [visible, links]);
