@@ -4,7 +4,6 @@
 @use "../../styles/link" as *;
 
 .hero-sect {
-  min-height: 600px;
   margin: 0 0 110px 0;
 
   @include vp-767 {
@@ -13,6 +12,7 @@
 }
 
 .hero {
+  min-height: 100vh;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

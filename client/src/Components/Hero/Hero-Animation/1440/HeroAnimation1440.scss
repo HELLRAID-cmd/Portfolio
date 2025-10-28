@@ -26,6 +26,7 @@
     font-size: var(--f-size-24);
     color: var(--c-white);
     text-align: center;
+    transition: color var(--transition-200) .2s;
 
     span {
       display: inline-block;
@@ -84,6 +85,13 @@
     padding: 15px;
     border: 1px solid var(--c-white);
     border-radius: 10px;
+    transition: box-shadow var(--transition-200), color var(--transition-200) .2s;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 0 10px -3px var(--c-white);
+      color: var(--c-purple);
+    }
 
     &--active {
       display: flex;
@@ -108,6 +116,7 @@
     &__name {
       color: var(--c-white);
       font-size: var(--f-size-20);
+      transition: color var(--transition-200) .2s;
     }
   }
 }
@@ -176,9 +185,48 @@
   48% {
     transform: translate(-460px, -270px) scale(1);
   }
+  // Нажатие курсора 1
+  48.5% {
+    transform: translate(-460px, -270px) scale(0.6);
+  }
+  49% {
+    transform: translate(-460px, -270px) scale(1);
+  }
+  68% {
+    transform: translate(-460px, -270px) scale(1);
+  }
+  70% {
+    transform: translate(-460px, -180px) scale(1);
+  }
+  // Нажатие курсора 2
+  70.5% {
+    transform: translate(-460px, -180px) scale(0.6);
+  }
+  71% {
+    transform: translate(-460px, -180px) scale(1);
+  }
+  88% {
+    transform: translate(-460px, -180px) scale(1);
+  }
+  90% {
+    transform: translate(-460px, -100px) scale(1);
+  }
+  // Нажатие курсора 3
+  90.5% {
+    transform: translate(-460px, -100px) scale(0.6);
+  }
+  91% {
+    transform: translate(-460px, -100px) scale(1);
+  }
+  96% {
+    transform: translate(-460px, -100px) scale(1);
+  }
+  98% {
+    transform: translate(-360px, -40px) scale(1);
+  }
   100% {
     opacity: 1;
-    transform: translate(-460px, -270px) scale(1);
+    transform: translate(-360px, -40px) scale(1);
   }
 }
 
