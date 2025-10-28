@@ -36,7 +36,6 @@ html {
       }
 
       &__burger {
-
         &-btn {
           border-color: var(--c-purple);
 
@@ -48,9 +47,7 @@ html {
       }
 
       &__drawer {
-
         .ant-drawer {
-
           &-close span {
             color: var(--c-white);
           }
@@ -103,17 +100,6 @@ html {
         }
       }
 
-      .hero__game {
-        &-link {
-          box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
-          color: var(--c-jaguar-dark);
-
-          &:hover {
-            box-shadow: 2px 3px 4px -2px var(--c-white);
-          }
-        }
-      }
-
       .hero__text {
         &-title::before,
         &-title::after {
@@ -127,21 +113,35 @@ html {
         &-title::after {
           opacity: 1;
         }
-      }
-    }
 
-    .sudoku {
-      &-game {
-        &__cell {
-          border-color: var(--c-gray);
+        &-desc {
           color: var(--c-jaguar-dark);
         }
       }
     }
 
-    .x-o-game {
-      .square-button {
-        border-color: var(--c-jaguar-dark);
+    .animation {
+      &-title {
+        color: var(--c-jaguar-dark);
+        transition: color var(--transition-200) .2s;
+      }
+
+      &-link {
+        color: var(--c-jaguar-dark);
+        transition: box-shadow var(--transition-200), color var(--transition-200) .2s;
+
+        &:hover,
+        &:focus-visible {
+          box-shadow: 0 0 10px -3px var(--c-purple);
+          color: var(--c-purple);
+        }
+      }
+
+      &-logo {
+        &__name {
+          transition: color var(--transition-200) .2s;
+          color: var(--c-jaguar-dark);
+        }
       }
     }
 
@@ -178,16 +178,6 @@ html {
             opacity var(--transition-200) $delay-02;
         }
       }
-    }
-    a,
-    p,
-    span {
-      color: var(--c-jaguar-dark);
-      transition: color var(--transition-200) $delay-02;
-    }
-
-    h2 {
-      color: var(--c-purple);
     }
   }
   &.dark {
