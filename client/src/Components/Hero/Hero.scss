@@ -3,16 +3,17 @@
 @use "../../styles/button" as *;
 @use "../../styles/link" as *;
 
-.hero-sect {
-  margin: 0 0 110px 0;
+// .hero-sect {
+//   margin: 0 0 110px 0;
 
-  @include vp-767 {
-    margin: 0 0 60px 0;
-  }
-}
+//   @include vp-767 {
+//     margin: 0 0 60px 0;
+//   }
+// }
 
 .hero {
-  min-height: 100vh;
+  height: 900px;
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,9 +22,14 @@
     position: relative;
     padding: 110px 0 0 0;
 
-    @media (max-width: 900px) {
-      flex-direction: column;
+    @include vp-1023 {
+      justify-content: center;
+      grid-template-columns: 1fr;
     }
+
+    // @media (max-width: 900px) {
+    //   flex-direction: column;
+    // }
 
     @include vp-767 {
       gap: 30px;

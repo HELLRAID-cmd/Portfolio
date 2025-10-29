@@ -28,7 +28,7 @@ export const HeroTelegram = ({showLinks, links, visible}: HeroProps) => {
             width={40}
             className="animation-logo__img"
           />
-          <span className="animation-logo__name">HELLRAID</span>
+          <span className="animation-logo__name">HELLRAID1</span>
         </span>
       </a>
     </li>
