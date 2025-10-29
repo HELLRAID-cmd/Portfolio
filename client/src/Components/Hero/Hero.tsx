@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import "./Hero.scss";
-import { Animation1440 } from "./Hero-Animation/1440/HeroAnimation1440";
+import { Animation } from "./Hero-Animation/animation/HeroAnimation";
 
 export const Hero = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => setWidth(window.innerWidth);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   return (
     <>
       <section className="hero-sect" id="about">
@@ -31,7 +31,8 @@ export const Hero = () => {
                 </a>
               </div>
               <div className="hero__animation">
-                {width >= 1440 && <Animation1440 />}
+                <Animation />
+                {/* {width >= 1440 && <Animation1440 />} */}
                 {/* {width < 1440 && width >= 1024 && <Animate1024 />}
                 {width < 1024 && width >= 764 && <Animate764 />}
                 {width < 764 && <Animate360 />} */}
