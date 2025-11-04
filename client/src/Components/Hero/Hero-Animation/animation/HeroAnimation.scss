@@ -1,3 +1,5 @@
+@use "../../../../styles/mixins" as *;
+
 .hero__animation-cursor {
   opacity: 0;
   animation: mouseMove 15s linear forwards 0.5s;
@@ -6,7 +8,6 @@
   height: 48px;
   bottom: 0;
   right: 0;
-  transform: scale(0.6);
   z-index: 10;
 }
 
@@ -136,14 +137,14 @@
   }
   // Нажатие на кнопку
   11.9% {
-    transform: translate(-495px, -360px) scale(1);
+    transform: translate(-485px, -360px) scale(1);
   }
   // Передаскивание с нажатой кнопкой
   12% {
-    transform: translate(-495px, -360px) scale(0.6);
+    transform: translate(-485px, -360px) scale(0.6);
   }
   13% {
-    transform: translate(-495px, -360px) scale(0.6);
+    transform: translate(-485px, -360px) scale(0.6);
   }
   17% {
     transform: translate(-275px, -175px) scale(0.6);
@@ -183,43 +184,43 @@
     transform: translate(-380px, -290px) scale(1);
   }
   48% {
-    transform: translate(-460px, -270px) scale(1);
+    transform: translate(-400px, -270px) scale(1);
   }
   // Нажатие курсора 1
   48.5% {
-    transform: translate(-460px, -270px) scale(0.6);
+    transform: translate(-400px, -270px) scale(0.6);
   }
   49% {
-    transform: translate(-460px, -270px) scale(1);
+    transform: translate(-400px, -270px) scale(1);
   }
   68% {
-    transform: translate(-460px, -270px) scale(1);
+    transform: translate(-400px, -270px) scale(1);
   }
   70% {
-    transform: translate(-460px, -180px) scale(1);
+    transform: translate(-400px, -180px) scale(1);
   }
   // Нажатие курсора 2
   70.5% {
-    transform: translate(-460px, -180px) scale(0.6);
+    transform: translate(-400px, -180px) scale(0.6);
   }
   71% {
-    transform: translate(-460px, -180px) scale(1);
+    transform: translate(-400px, -180px) scale(1);
   }
   88% {
-    transform: translate(-460px, -180px) scale(1);
+    transform: translate(-400px, -180px) scale(1);
   }
   90% {
-    transform: translate(-460px, -100px) scale(1);
+    transform: translate(-400px, -100px) scale(1);
   }
   // Нажатие курсора 3
   90.5% {
-    transform: translate(-460px, -100px) scale(0.6);
+    transform: translate(-400px, -100px) scale(0.6);
   }
   91% {
-    transform: translate(-460px, -100px) scale(1);
+    transform: translate(-400px, -100px) scale(1);
   }
   96% {
-    transform: translate(-460px, -100px) scale(1);
+    transform: translate(-400px, -100px) scale(1);
   }
   98% {
     transform: translate(-360px, -40px) scale(1);
@@ -265,7 +266,8 @@
     height: 300px;
   }
   100% {
-    width: 535px;
+    max-width: 535px;
+    width: 100%;
     height: 300px;
     border-color: var(--c-white);
   }
