@@ -3,14 +3,6 @@
 @use "../../styles/button" as *;
 @use "../../styles/link" as *;
 
-// .hero-sect {
-//   margin: 0 0 110px 0;
-
-//   @include vp-767 {
-//     margin: 0 0 60px 0;
-//   }
-// }
-
 .hero {
   height: 900px;
 
@@ -23,7 +15,6 @@
     padding: 110px 0 0 0;
 
     @include vp-1023 {
-      justify-content: center;
       grid-template-columns: 1fr;
     }
 
@@ -83,7 +74,6 @@
     &-title::before,
     &-title::after {
       content: attr(data-text);
-      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       inset: 0;
@@ -117,6 +107,8 @@
   }
 
   &__animation {
+    display: flex;
+    margin: 0 auto;
     position: relative;
     width: 100%;
     height: 400px;
