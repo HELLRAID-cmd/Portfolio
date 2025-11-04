@@ -74,6 +74,7 @@
     &-title::before,
     &-title::after {
       content: attr(data-text);
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       inset: 0;
