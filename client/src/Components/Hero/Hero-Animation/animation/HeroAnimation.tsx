@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import "./HeroAnimation1440.scss";
+import "./HeroAnimation.scss";
 import { HeroGithub } from "../Hero-item/Hero-github";
 import { HeroMail } from "../Hero-item/Hero-mail";
 import { HeroTelegram } from "../Hero-item/Hero-telegram";
 
-export const Animation1440 = () => {
+export const Animation = () => {
   const [showTitle, setShowTitle] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
   const [visibleLinks, setVisibleLinks] = useState([false, false, false]);

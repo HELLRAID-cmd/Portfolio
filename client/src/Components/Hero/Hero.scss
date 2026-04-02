@@ -3,16 +3,9 @@
 @use "../../styles/button" as *;
 @use "../../styles/link" as *;
 
-.hero-sect {
-  min-height: 600px;
-  margin: 0 0 110px 0;
-
-  @include vp-767 {
-    margin: 0 0 60px 0;
-  }
-}
-
 .hero {
+  height: 900px;
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,9 +14,13 @@
     position: relative;
     padding: 110px 0 0 0;
 
-    @media (max-width: 900px) {
-      flex-direction: column;
+    @include vp-1023 {
+      grid-template-columns: 1fr;
     }
+
+    // @media (max-width: 900px) {
+    //   flex-direction: column;
+    // }
 
     @include vp-767 {
       gap: 30px;
@@ -111,6 +108,8 @@
   }
 
   &__animation {
+    display: flex;
+    margin: 0 auto;
     position: relative;
     width: 100%;
     height: 400px;
