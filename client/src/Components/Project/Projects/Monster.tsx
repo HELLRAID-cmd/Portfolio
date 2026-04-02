@@ -11,12 +11,12 @@ const Monster = () => {
       <picture className="project__card-picture">
         <source
           media="(max-width: 1000px)"
-          srcSet="./public/img/project/monster@2x.jpg"
+          srcSet={`${import.meta.env.BASE_URL}img/project/monster@2x.jpg`}
           width={200}
         />
         <img
           className="project__card-picture-img"
-          src="./public/img/project/monster.jpg"
+          src={`${import.meta.env.BASE_URL}img/project/monster.jpg`}
           width={500}
           alt="img"
         />
