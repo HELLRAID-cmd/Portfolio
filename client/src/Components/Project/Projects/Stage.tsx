@@ -11,12 +11,12 @@ const Stage = () => {
       <picture className="project__card-picture">
         <source
           media="(max-width: 1000px)"
-          srcSet="./public/img/project/monster@2x.jpg"
+          srcSet={`${import.meta.env.BASE_URL}img/project/stage.jpg`}
           width={200}
         />
         <img
           className="project__card-picture-img"
-          src="./public/img/project/monster.jpg"
+          src={`${import.meta.env.BASE_URL}img/project/stage.jpg`}
           width={500}
           alt="img"
         />
@@ -24,7 +24,7 @@ const Stage = () => {
       <div className="project__card-inner">
         <a
           className="project__card-inner-title link-title"
-          href="https://github.com/HELLRAID-cmd/Tap-Tap-MonsterHunter"
+          href="https://github.com/HELLRAID-cmd/StageTask"
           target="_blank"
         >
           Stage Task

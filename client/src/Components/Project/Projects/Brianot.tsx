@@ -11,7 +11,7 @@ const Briaton = () => {
       <picture className="project__card-picture">
         <source
           media="(max-width: 1000px)"
-          srcSet={`${import.meta.env.BASE_URL}img/project/project.jpg`}
+          srcSet={`${import.meta.env.BASE_URL}img/project/project@2x.jpg`}
           width={200}
         />
         <img

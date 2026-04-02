@@ -11,12 +11,12 @@ const Crypto = () => {
       <picture className="project__card-picture">
         <source
           media="(max-width: 1000px)"
-          srcSet="./public/img/project/cryptoProject@2x.jpg"
+          srcSet={`${import.meta.env.BASE_URL}img/project/cryptoProject@2x.jpg`}
           width={200}
         />
         <img
           className="project__card-picture-img"
-          src="./public/img/project/cryptoProject.jpg"
+          src={`${import.meta.env.BASE_URL}img/project/cryptoProject.jpg`}
           width={500}
           alt="img"
         />
@@ -24,7 +24,7 @@ const Crypto = () => {
       <div className="project__card-inner">
         <a
           className="project__card-inner-title link-title"
-          href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
+          href="https://github.com/HELLRAID-cmd/ProjectCrypt"
           target="_blank"
         >
           Crypto Project
