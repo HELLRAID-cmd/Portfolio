@@ -1,46 +1,30 @@
-# Portfolio 
+# Portfolio (Broken Version)
 
-## Это мой персональный сайт-портфолио, где представлена основная информация обо мне, моих навыках и проектах.
+## Это ранняя версия моего сайта-портфолио, в которой разрабатывался основной функционал и структура приложения.
+Проект создавался с целью практики и закрепления навыков frontend-разработки.
 
-![Главная страница](client/public/img/github/image.png)
-
-## Стек технологий:
-<div>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" height="40" alt="vite logo"  />
-  <img width="12" />
-  <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" height="40" alt="vite logo"  />
-  <img width="12" />
-</div>
+На данный момент проект не поддерживается и не работает корректно.
 
 ## Цель проекта:
 - Создание современного, адаптивного портфолио для демонстрации моих навыков разработки на React и TypeScript, а также практики работы с библиотекой Ant Design и сборщиком Vite.
 
-## Как запустить проект?
-```bash
+## Причина поломки:
+Во время разработки возникли критические проблемы с npm и зависимостями проекта:
 
-# Скопировать проект
-git clone https://github.com/HELLRAID-cmd/Portfolio.git
+- конфликты пакетов
+- некорректная установка зависимостей
+- ошибки при запуске проекта
 
-# Перейти в папку client
-cd client
+Восстановить проект без полной переработки окружения оказалось нецелесообразно.
 
-# Установить зависимости
-npm i
+## Что было сделано:
+роект был полностью перенесён в новый репозиторий, где:
 
-# Запустить проект
-npm run dev
-```
-## Адаптивность:
-Проект оптимизирован под мобильные устройства.
-Минимальная комфортная ширина просмотра — 360px.
+- заново настроено окружение
+- исправлены проблемы с зависимостями
+- продолжена разработка
+
+[Актуальная версия проекта](https://github.com/HELLRAID-cmd/Portfolio-2026)
 
 ## Связаться со мной:
 <a href="https://t.me/HELLRAD1" target="_blank">
